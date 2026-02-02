@@ -112,8 +112,11 @@ graph TB
 
 coreboot can launch a **TianoCore EDK2 payload**, providing full UEFI boot services:
 
-```
-coreboot (hardware init) → EDK2 Payload → UEFI Applications/OS
+```mermaid
+graph LR
+    CB[coreboot<br/>hardware init] --> EDK2[EDK2 Payload] --> OS[UEFI Applications/OS]
+    style CB fill:#4caf50
+    style EDK2 fill:#2196f3
 ```
 
 This gives you coreboot's fast, auditable init with UEFI compatibility.
@@ -388,66 +391,71 @@ flashrom -p ch341a_spi -w libreboot.rom
 
 Use coreboot for fast, auditable hardware init, then launch EDK2 for UEFI compatibility:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    coreboot                                 │
-│  ┌──────────┐  ┌───────────┐  ┌───────────┐               │
-│  │ Bootblock│→ │ Romstage  │→ │ Ramstage  │               │
-│  │ (reset)  │  │ (memory)  │  │ (devices) │               │
-│  └──────────┘  └───────────┘  └─────┬─────┘               │
-│                                      │                     │
-│                                      ▼                     │
-│                            ┌─────────────────┐            │
-│                            │  EDK2 Payload   │            │
-│                            │  (UEFI DXE+BDS) │            │
-│                            └────────┬────────┘            │
-└─────────────────────────────────────┼─────────────────────┘
-                                      ▼
-                              UEFI Applications / OS
+```mermaid
+graph TB
+    subgraph coreboot["coreboot"]
+        BB[Bootblock<br/>reset] --> RS[Romstage<br/>memory]
+        RS --> RAM[Ramstage<br/>devices]
+        RAM --> EDK2[EDK2 Payload<br/>UEFI DXE+BDS]
+    end
+
+    EDK2 --> OS[UEFI Applications / OS]
+
+    style BB fill:#4caf50
+    style RS fill:#4caf50
+    style RAM fill:#4caf50
+    style EDK2 fill:#2196f3
 ```
 
 ### LinuxBoot with UEFI PEI
 
 Keep UEFI PEI for silicon init, replace DXE with LinuxBoot:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    UEFI PEI Phase                          │
-│  ┌──────┐  ┌──────────┐  ┌──────────────────┐            │
-│  │ SEC  │→ │   PEI    │→ │ Memory/Silicon   │            │
-│  │      │  │          │  │ Initialization   │            │
-│  └──────┘  └──────────┘  └────────┬─────────┘            │
-└───────────────────────────────────┼───────────────────────┘
-                                    ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    LinuxBoot                               │
-│  ┌──────────────┐  ┌─────────────┐  ┌─────────────┐      │
-│  │ Linux Kernel │→ │   u-root    │→ │ systemboot  │      │
-│  │              │  │ (initramfs) │  │ (boot logic)│      │
-│  └──────────────┘  └─────────────┘  └──────┬──────┘      │
-└────────────────────────────────────────────┼──────────────┘
-                                             ▼
-                                      kexec to Target OS
+```mermaid
+graph TB
+    subgraph UEFI_PEI["UEFI PEI Phase"]
+        SEC[SEC] --> PEI[PEI]
+        PEI --> MEM[Memory/Silicon<br/>Initialization]
+    end
+
+    subgraph LB["LinuxBoot"]
+        KERNEL[Linux Kernel] --> UROOT[u-root<br/>initramfs]
+        UROOT --> SYSBOOT[systemboot<br/>boot logic]
+    end
+
+    MEM --> KERNEL
+    SYSBOOT --> OS[kexec to Target OS]
+
+    style SEC fill:#2196f3
+    style PEI fill:#2196f3
+    style MEM fill:#2196f3
+    style KERNEL fill:#ff9800
+    style UROOT fill:#ff9800
+    style SYSBOOT fill:#ff9800
 ```
 
 ### AMD openSIL with Host Firmware
 
 openSIL provides silicon init as a library for any host:
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│              Host Firmware (UEFI/coreboot/oreboot)         │
-│                                                             │
-│   ┌───────────────────────────────────────────────────┐   │
-│   │              AMD openSIL Libraries                 │   │
-│   │  ┌─────────┐  ┌─────────┐  ┌─────────┐          │   │
-│   │  │  xSIM   │  │  xPRF   │  │  xUSL   │          │   │
-│   │  │ Silicon │  │Platform │  │Utilities│          │   │
-│   │  └─────────┘  └─────────┘  └─────────┘          │   │
-│   └───────────────────────────────────────────────────┘   │
-│                                                             │
-│   Host continues with DXE/ramstage/etc.                    │
-└─────────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph HOST["Host Firmware (UEFI/coreboot/oreboot)"]
+        subgraph OPENSIL["AMD openSIL Libraries"]
+            xSIM[xSIM<br/>Silicon]
+            xPRF[xPRF<br/>Platform]
+            xUSL[xUSL<br/>Utilities]
+        end
+        CONTINUE[Host continues with<br/>DXE/ramstage/etc.]
+    end
+
+    xSIM --> xUSL
+    xPRF --> xUSL
+    OPENSIL --> CONTINUE
+
+    style xSIM fill:#ed1c24
+    style xPRF fill:#ed1c24
+    style xUSL fill:#ed1c24
 ```
 
 ---
