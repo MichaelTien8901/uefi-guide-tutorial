@@ -94,7 +94,7 @@ Curated collection of specifications, documentation, and community resources for
 | [TF-A Documentation](https://trustedfirmware-a.readthedocs.io/) | Trusted Firmware-A |
 | [TF-A GitHub](https://github.com/ARM-software/arm-trusted-firmware) | Source repository |
 | [OP-TEE](https://optee.readthedocs.io/) | Open Portable TEE |
-| [TF-M](https://tf-m-user-guide.trustedfirmware.org/) | TF for Cortex-M |
+| [TF-M](https://trustedfirmware-m.readthedocs.io/) | TF for Cortex-M |
 
 ## Tools and Utilities
 
@@ -141,7 +141,7 @@ Curated collection of specifications, documentation, and community resources for
 | Resource | Description |
 |----------|-------------|
 | [Firmware Security](https://firmwaresecurity.com/) | Security news and analysis |
-| [Beyond Logic](https://www.beyondlogic.org/uefifwd/) | UEFI tutorials |
+| [TianoCore Training](https://github.com/tianocore-training) | UEFI training materials |
 | [OSDev Wiki](https://wiki.osdev.org/UEFI) | UEFI development guide |
 
 ### Books
