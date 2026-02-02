@@ -11,18 +11,29 @@ examples/
     ├── UefiGuidePkg.dec      # Package declaration
     ├── Include/              # Common headers
     │   └── UefiGuide.h
-    ├── HelloWorld/           # Part 1: First application
-    ├── DriverExample/        # Part 2: Driver model
-    ├── ProtocolExample/      # Part 2: Protocols
-    ├── MemoryExample/        # Part 2: Memory services
-    ├── ConsoleExample/       # Part 3: Console I/O
-    ├── GopExample/           # Part 3: Graphics
-    ├── FileSystemExample/    # Part 3: File access
-    ├── NetworkExample/       # Part 3: Networking
-    ├── ShellCommand/         # Part 5: Shell command project
-    ├── BootMenu/             # Part 5: Boot menu project
-    ├── NetworkApp/           # Part 5: Network app project
-    └── BootLoader/           # Part 5: Boot loader project
+    │
+    │   # Part 1: Getting Started
+    ├── HelloWorld/           # First UEFI application
+    │
+    │   # Part 2: Core Concepts
+    ├── DriverExample/        # UEFI driver binding protocol
+    ├── ProtocolExample/      # Custom protocol creation
+    ├── MemoryExample/        # Memory allocation services
+    ├── ServicesExample/      # Boot and Runtime services
+    │
+    │   # Part 3: Essential Services
+    ├── ConsoleExample/       # Console I/O and colors
+    ├── GopExample/           # Graphics Output Protocol
+    ├── FileSystemExample/    # File system access
+    ├── BlockIoExample/       # Block device and partitions
+    ├── NetworkExample/       # Network stack basics
+    ├── VariableExample/      # UEFI variables
+    │
+    │   # Part 5: Practical Projects
+    ├── ShellCommand/         # Custom shell command
+    ├── BootMenu/             # Graphical boot menu
+    ├── NetworkApp/           # Network application
+    └── BootLoader/           # Custom boot loader
 ```
 
 ## Building
