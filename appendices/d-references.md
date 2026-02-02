@@ -161,15 +161,48 @@ Curated collection of specifications, documentation, and community resources for
 | [edk2/MdeModulePkg/Application](https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Application) | Reference applications |
 | [edk2/ShellPkg/Application](https://github.com/tianocore/edk2/tree/master/ShellPkg/Application) | Shell commands |
 | [edk2-libc](https://github.com/tianocore/edk2-libc) | POSIX applications |
+| [MS_UEFI](https://github.com/microsoft/MS_UEFI) | Microsoft public UEFI features |
 
-### Community Projects
+### Standalone UEFI Development
 
-| Project | Description |
-|---------|-------------|
-| [rEFInd](https://www.rodsbooks.com/refind/) | Boot manager |
-| [Clover](https://github.com/CloverHackyColor/CloverBootloader) | Boot loader |
-| [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/) | Systemd boot |
-| [GRUB2](https://www.gnu.org/software/grub/) | GNU bootloader |
+Projects that don't require full EDK2 setup - great for learning:
+
+| Project | Description | Language |
+|---------|-------------|----------|
+| [uefi-simple](https://github.com/pbatard/uefi-simple) | Minimal "Hello World" with GCC/MinGW/VS | C |
+| [Simple-UEFI-Bootloader](https://github.com/KunYi/Simple-UEFI-Bootloader) | Bare-metal x86-64 bootloader | C |
+| [uefi-framebuffer-example](https://github.com/Richard-W/uefi-framebuffer-example) | GOP framebuffer demo | C |
+| [yabits/uefi](https://github.com/yabits/uefi) | Lightweight UEFI coreboot payload | C |
+
+### Rust UEFI Development
+
+| Resource | Description |
+|----------|-------------|
+| [uefi-rs](https://github.com/rust-osdev/uefi-rs) | Safe Rust wrappers for UEFI |
+| [Rust UEFI Book](https://rust-osdev.github.io/uefi-rs/introduction.html) | Complete tutorial |
+| [uefi crate docs](https://docs.rs/uefi/latest/uefi/) | API documentation |
+| [uefi-graphics](https://github.com/DianaNites/uefi-graphics) | embedded-graphics driver for UEFI |
+
+### Boot Managers & Loaders
+
+Real-world UEFI applications to learn from:
+
+| Project | Description | Source |
+|---------|-------------|--------|
+| [rEFInd](https://www.rodsbooks.com/refind/) | Feature-rich boot manager | [SourceForge](https://sourceforge.net/projects/refind/) |
+| [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/) | Minimal UEFI boot manager | [GitHub](https://github.com/systemd/systemd/tree/main/src/boot/efi) |
+| [Limine](https://limine-bootloader.org/) | Modern multiprotocol bootloader | [GitHub](https://github.com/limine-bootloader/limine) |
+| [Clover](https://github.com/CloverHackyColor/CloverBootloader) | macOS-focused boot loader | GitHub |
+| [GRUB2](https://www.gnu.org/software/grub/) | GNU bootloader (BIOS & UEFI) | [GNU](https://git.savannah.gnu.org/cgit/grub.git) |
+
+### Firmware Analysis Tools
+
+| Tool | Purpose | Link |
+|------|---------|------|
+| [UEFITool](https://github.com/LongSoft/UEFITool) | Firmware image viewer/editor | GitHub |
+| [Fiano](https://github.com/linuxboot/fiano) | Go-based UEFI image tools (Google/Meta) | GitHub |
+| [FMMT](https://github.com/tianocore/edk2-staging/tree/FMMT) | Python-based firmware module tool | TianoCore |
+| [UEFIExtract](https://github.com/LongSoft/UEFITool) | Extract modules from firmware | Part of UEFITool |
 
 ## Quick Links by Topic
 
