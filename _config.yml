@@ -66,70 +66,12 @@ callouts:
     title: Important
     color: red
 
-# Collections for sections
-collections:
-  part1:
-    output: true
-    permalink: /:collection/:name
-  part2:
-    output: true
-    permalink: /:collection/:name
-  part3:
-    output: true
-    permalink: /:collection/:name
-  part4:
-    output: true
-    permalink: /:collection/:name
-  part5:
-    output: true
-    permalink: /:collection/:name
-  appendices:
-    output: true
-    permalink: /:collection/:name
-
-# Default front matter
+# Default front matter - only set layout, let pages define their own nav structure
 defaults:
   - scope:
       path: ""
-      type: "pages"
     values:
-      layout: "default"
-  - scope:
-      path: "part1"
-    values:
-      layout: "default"
-      nav_order: 2
-      parent: "Part 1: Getting Started"
-  - scope:
-      path: "part2"
-    values:
-      layout: "default"
-      nav_order: 3
-      parent: "Part 2: Core Concepts"
-  - scope:
-      path: "part3"
-    values:
-      layout: "default"
-      nav_order: 4
-      parent: "Part 3: Essential Services"
-  - scope:
-      path: "part4"
-    values:
-      layout: "default"
-      nav_order: 5
-      parent: "Part 4: Advanced Topics"
-  - scope:
-      path: "part5"
-    values:
-      layout: "default"
-      nav_order: 6
-      parent: "Part 5: Practical Projects"
-  - scope:
-      path: "appendices"
-    values:
-      layout: "default"
-      nav_order: 7
-      parent: "Appendices"
+      layout: default
 
 # Build settings
 markdown: kramdown
