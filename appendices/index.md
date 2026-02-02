@@ -24,6 +24,7 @@ Reference materials, tools, and additional resources.
 | **[D. References](d-references/)** | Specifications, documentation, community links |
 | **[E. Glossary](e-glossary/)** | UEFI terminology and error codes |
 | **[F. ARM Quick Reference](f-arm-reference/)** | ARM registers, PSCI, GIC, SystemReady checklist |
+| **[G. Alternative Firmware](g-alternative-firmware/)** | coreboot, LinuxBoot, AMD openSIL, oreboot |
 
 ## Quick Reference Cards
 
