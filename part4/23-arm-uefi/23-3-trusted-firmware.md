@@ -28,10 +28,10 @@ graph TB
     BL2 --> BL32
     BL2 --> BL33
 
-    style BL1 fill:#f99,stroke:#333
-    style BL31 fill:#f99,stroke:#333
-    style BL32 fill:#fcc,stroke:#333
-    style BL33 fill:#9f9,stroke:#333
+    style BL1 fill:#633,stroke:#333
+    style BL31 fill:#633,stroke:#333
+    style BL32 fill:#05c,stroke:#333
+    style BL33 fill:#369,stroke:#333
 ```
 
 ## Building TF-A
