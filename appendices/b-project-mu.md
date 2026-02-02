@@ -1605,7 +1605,7 @@ SimpleAppEntry (
 
 - [Project Mu Documentation](https://microsoft.github.io/mu/) - Official documentation
 - [Project Mu GitHub](https://github.com/microsoft?q=mu_&type=all) - All Mu repositories
-- [Stuart Documentation](https://github.com/tianocore/edk2-pytool-extensions/blob/master/docs/usability/using_stuart.md) - Build system guide
+- [Stuart Documentation](https://www.tianocore.org/edk2-pytool-extensions/) - Build system guide
 
 ### Repositories
 
@@ -1627,7 +1627,7 @@ SimpleAppEntry (
 
 ### Blog Posts and Articles
 
-- [Introducing Project Mu - Windows Developer Blog](https://blogs.windows.com/windowsdeveloper/2018/12/19/introducing-project-mu/)
+- [Introducing Project Mu - Windows Developer Blog](https://blogs.windows.com/windowsdeveloper/2018/12/19/%E2%80%AFintroducing-project-mu/)
 - [Rust Support for UEFI - Microsoft Tech Community](https://techcommunity.microsoft.com/blog/surfaceitpro/rust-support-for-uefi-development-through-project-mu/3970582)
 
 ---
