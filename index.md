@@ -13,7 +13,7 @@ A comprehensive tutorial for UEFI firmware development, from your first "Hello W
 {: .fs-6 .fw-300 }
 
 [Get Started](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View on GitHub](https://github.com/user/uefi-guide-tutorial){: .btn .fs-5 .mb-4 .mb-md-0 }
+[View on GitHub](https://github.com/MichaelTien8901/uefi-guide-tutorial){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 

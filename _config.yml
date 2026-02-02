@@ -25,7 +25,7 @@ search:
 # Aux links (top right)
 aux_links:
   "View on GitHub":
-    - "https://github.com/user/uefi-guide-tutorial"
+    - "https://github.com/MichaelTien8901/uefi-guide-tutorial"
 
 aux_links_new_tab: true
 
