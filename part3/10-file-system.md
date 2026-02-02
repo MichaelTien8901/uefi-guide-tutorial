@@ -3,6 +3,7 @@ layout: default
 title: "10. File System Access"
 parent: "Part 3: Essential Services"
 nav_order: 3
+permalink: /part3/10-file-system/
 ---
 
 # Chapter 10: File System Access

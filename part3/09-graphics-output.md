@@ -3,6 +3,7 @@ layout: default
 title: "9. Graphics Output"
 parent: "Part 3: Essential Services"
 nav_order: 2
+permalink: /part3/09-graphics-output/
 ---
 
 # Chapter 9: Graphics Output

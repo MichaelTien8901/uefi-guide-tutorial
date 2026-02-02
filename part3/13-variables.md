@@ -3,6 +3,7 @@ layout: default
 title: "13. UEFI Variables"
 parent: "Part 3: Essential Services"
 nav_order: 6
+permalink: /part3/13-variables/
 ---
 
 # Chapter 13: UEFI Variables

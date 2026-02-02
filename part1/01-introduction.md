@@ -3,6 +3,7 @@ layout: default
 title: "1. Introduction to UEFI"
 parent: "Part 1: Getting Started"
 nav_order: 1
+permalink: /part1/01-introduction/
 ---
 
 # Chapter 1: Introduction to UEFI

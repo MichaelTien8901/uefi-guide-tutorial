@@ -3,6 +3,7 @@ layout: default
 title: "12. Network Stack"
 parent: "Part 3: Essential Services"
 nav_order: 5
+permalink: /part3/12-network/
 ---
 
 # Chapter 12: Network Stack

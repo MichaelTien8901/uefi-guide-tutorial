@@ -3,6 +3,7 @@ layout: default
 title: "3. Hello World"
 parent: "Part 1: Getting Started"
 nav_order: 3
+permalink: /part1/03-hello-world/
 ---
 
 # Chapter 3: Hello World

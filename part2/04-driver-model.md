@@ -3,6 +3,7 @@ layout: default
 title: "4. Driver Model"
 parent: "Part 2: Core Concepts"
 nav_order: 1
+permalink: /part2/04-driver-model/
 ---
 
 # Chapter 4: UEFI Driver Model

@@ -3,6 +3,7 @@ layout: default
 title: "6. Memory Services"
 parent: "Part 2: Core Concepts"
 nav_order: 3
+permalink: /part2/06-memory-services/
 ---
 
 # Chapter 6: Memory Services

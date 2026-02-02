@@ -3,6 +3,7 @@ layout: default
 title: "8. Console I/O"
 parent: "Part 3: Essential Services"
 nav_order: 1
+permalink: /part3/08-console-io/
 ---
 
 # Chapter 8: Console I/O

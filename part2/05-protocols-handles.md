@@ -3,6 +3,7 @@ layout: default
 title: "5. Protocols and Handles"
 parent: "Part 2: Core Concepts"
 nav_order: 2
+permalink: /part2/05-protocols-handles/
 ---
 
 # Chapter 5: Protocols and Handles

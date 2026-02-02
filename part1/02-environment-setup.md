@@ -3,6 +3,7 @@ layout: default
 title: "2. Environment Setup"
 parent: "Part 1: Getting Started"
 nav_order: 2
+permalink: /part1/02-environment-setup/
 ---
 
 # Chapter 2: Environment Setup

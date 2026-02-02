@@ -3,6 +3,7 @@ layout: default
 title: "11. Block I/O"
 parent: "Part 3: Essential Services"
 nav_order: 4
+permalink: /part3/11-block-io/
 ---
 
 # Chapter 11: Block I/O
