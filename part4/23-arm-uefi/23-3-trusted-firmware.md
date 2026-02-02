@@ -519,6 +519,7 @@ graph LR
 
 ### FIP UUID Definitions
 
+{% raw %}
 ```c
 // include/tools_share/firmware_image_package.h
 #define UUID_TRUSTED_BOOT_FIRMWARE_BL2 \
@@ -537,6 +538,7 @@ graph LR
     {{0xd6, 0xd0, 0xee, 0xa7}, {0xfc, 0xea}, {0xd5, 0x4b}, \
      0x97, 0x82, {0x99, 0x34, 0xf2, 0x34, 0xb6, 0xe4}}
 ```
+{% endraw %}
 
 ## Authenticated Boot
 
