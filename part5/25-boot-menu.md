@@ -987,8 +987,8 @@ qemu-system-x86_64 \
 
 ## References
 
-- [UEFI Graphics Output Protocol](https://uefi.org/specs/UEFI/2.10/12_Protocols_Console_Support.html)
-- [Boot Manager Specification](https://uefi.org/specs/UEFI/2.10/03_Boot_Manager.html)
+- [UEFI Graphics Output Protocol](https://uefi.org/specs/UEFI/2.10/12_Protocols_Console_Support/)
+- [Boot Manager Specification](https://uefi.org/specs/UEFI/2.10/03_Boot_Manager/)
 - [EDK2 BDS](https://github.com/tianocore/edk2/tree/master/MdeModulePkg/Universal/BdsDxe)
 
 ---

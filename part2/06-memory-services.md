@@ -655,7 +655,7 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services.html) - Service availability and transitions
+- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services/) - Service availability and transitions
 
 ---
 

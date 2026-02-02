@@ -1002,7 +1002,7 @@ Jumping to kernel at 0x0000000000100000...
 - [UEFI ExitBootServices](https://uefi.org/specs/UEFI/2.10/07_Services_Boot_Services.html#efi-boot-services-exitbootservices)
 - [ELF Specification](https://refspecs.linuxfoundation.org/elf/elf.pdf)
 - [OSDev Boot Protocols](https://wiki.osdev.org/Boot_Protocols)
-- [Linux x86 Boot Protocol](https://www.kernel.org/doc/html/latest/arch/x86/boot.html)
+- [Linux x86 Boot Protocol](https://www.kernel.org/doc/html/latest/arch/x86/boot/)
 
 ---
 

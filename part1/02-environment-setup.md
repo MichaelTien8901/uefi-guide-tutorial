@@ -823,7 +823,7 @@ Build result:
 
 ## Next Steps
 
-- [Chapter 3: Hello World](03-hello-world.html) - Build your first UEFI application
+- [Chapter 3: Hello World](03-hello-world/) - Build your first UEFI application
 
 ---
 

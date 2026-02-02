@@ -909,8 +909,8 @@ Exit:
 
 ## Next Steps
 
-- [Chapter 21: RAS Features](21-ras-features.html) - Reliability features
-- [Chapter 22: eSPI Interface](22-espi.html) - Enhanced SPI
+- [Chapter 21: RAS Features](21-ras-features/) - Reliability features
+- [Chapter 22: eSPI Interface](22-espi/) - Enhanced SPI
 
 ---
 

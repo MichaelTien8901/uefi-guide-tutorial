@@ -797,8 +797,8 @@ PlatformDxeEntryPoint (
 
 ## Next Steps
 
-- [Chapter 16: SMM](16-smm.html) - System Management Mode
-- [Chapter 17: Security](17-security.html) - Secure Boot, TPM
+- [Chapter 16: SMM](16-smm/) - System Management Mode
+- [Chapter 17: Security](17-security/) - Secure Boot, TPM
 
 ---
 

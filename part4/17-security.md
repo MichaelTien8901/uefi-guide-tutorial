@@ -801,8 +801,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 18: ACPI](18-acpi.html) - ACPI table management
-- [Chapter 19: Capsule Updates](19-capsule-updates.html) - Firmware updates
+- [Chapter 18: ACPI](18-acpi/) - ACPI table management
+- [Chapter 19: Capsule Updates](19-capsule-updates/) - Firmware updates
 
 ---
 

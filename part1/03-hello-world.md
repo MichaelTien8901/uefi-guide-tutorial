@@ -534,8 +534,8 @@ You've learned:
 
 ## Next Steps
 
-- [Chapter 4: Driver Model](../part2/04-driver-model.html) - Learn about UEFI drivers
-- [Chapter 5: Protocols and Handles](../part2/05-protocols-handles.html) - Understand protocol architecture
+- [Chapter 4: Driver Model](../part2/04-driver-model/) - Learn about UEFI drivers
+- [Chapter 5: Protocols and Handles](../part2/05-protocols-handles/) - Understand protocol architecture
 
 ---
 

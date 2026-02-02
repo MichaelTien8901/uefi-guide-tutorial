@@ -20,9 +20,9 @@ In this section, you'll build a solid foundation for UEFI development:
 
 | Chapter | Topics |
 |:--------|:-------|
-| **[1. Introduction](01-introduction.html)** | UEFI architecture, boot stages, services overview |
-| **[2. Environment Setup](02-environment-setup.html)** | EDK2, toolchains, QEMU/OVMF configuration |
-| **[3. Hello World](03-hello-world.html)** | Your first UEFI application |
+| **[1. Introduction](01-introduction/)** | UEFI architecture, boot stages, services overview |
+| **[2. Environment Setup](02-environment-setup/)** | EDK2, toolchains, QEMU/OVMF configuration |
+| **[3. Hello World](03-hello-world/)** | Your first UEFI application |
 
 ## Prerequisites
 

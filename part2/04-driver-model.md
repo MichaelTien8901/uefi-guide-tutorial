@@ -605,8 +605,8 @@ MinimalDriverEntryPoint (
 
 ## Next Steps
 
-- [Chapter 5: Protocols and Handles](05-protocols-handles.html) - Deep dive into protocol architecture
-- [Chapter 6: Memory Services](06-memory-services.html) - Memory allocation in UEFI
+- [Chapter 5: Protocols and Handles](05-protocols-handles/) - Deep dive into protocol architecture
+- [Chapter 6: Memory Services](06-memory-services/) - Memory allocation in UEFI
 
 ---
 

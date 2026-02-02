@@ -1115,8 +1115,8 @@ Shell> netutil get http://10.0.2.2:8080/test.txt output.txt
 ## References
 
 - [UEFI Network Stack](https://github.com/tianocore/edk2/tree/master/NetworkPkg)
-- [TCP4 Protocol Specification](https://uefi.org/specs/UEFI/2.10/27_Network_Protocols_TCP_IP.html)
-- [DNS4 Protocol](https://uefi.org/specs/UEFI/2.10/29_Network_Protocols_DNS_and_HTTP_Boot.html)
+- [TCP4 Protocol Specification](https://uefi.org/specs/UEFI/2.10/27_Network_Protocols_TCP_IP/)
+- [DNS4 Protocol](https://uefi.org/specs/UEFI/2.10/29_Network_Protocols_DNS_and_HTTP_Boot/)
 
 ---
 

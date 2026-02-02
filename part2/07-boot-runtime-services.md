@@ -689,7 +689,7 @@ UefiMain (
 ## Next Steps
 
 - [Part 3: Essential Services](../part3/) - Console, Graphics, File System
-- [Chapter 8: Console I/O](../part3/08-console-io.html) - Text input/output
+- [Chapter 8: Console I/O](../part3/08-console-io/) - Text input/output
 
 ---
 

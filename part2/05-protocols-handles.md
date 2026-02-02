@@ -721,8 +721,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 6: Memory Services](06-memory-services.html) - Memory allocation and management
-- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services.html) - Service availability
+- [Chapter 6: Memory Services](06-memory-services/) - Memory allocation and management
+- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services/) - Service availability
 
 ---
 

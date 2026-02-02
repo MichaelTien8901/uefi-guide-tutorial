@@ -18,12 +18,12 @@ Working with UEFI I/O, storage, network, and variable services.
 
 | Chapter | Topics |
 |:--------|:-------|
-| **[8. Console I/O](08-console-io.html)** | Text input/output, cursor control, colors |
-| **[9. Graphics (GOP)](09-graphics-output.html)** | Framebuffer, video modes, drawing operations |
-| **[10. File System](10-file-system.html)** | Reading/writing files, directory operations |
-| **[11. Block I/O](11-block-io.html)** | Sector access, storage devices, partitions |
-| **[12. Network Stack](12-network.html)** | TCP/UDP, DHCP, network configuration |
-| **[13. UEFI Variables](13-variables.html)** | Persistent storage, boot options, Secure Boot |
+| **[8. Console I/O](08-console-io/)** | Text input/output, cursor control, colors |
+| **[9. Graphics (GOP)](09-graphics-output/)** | Framebuffer, video modes, drawing operations |
+| **[10. File System](10-file-system/)** | Reading/writing files, directory operations |
+| **[11. Block I/O](11-block-io/)** | Sector access, storage devices, partitions |
+| **[12. Network Stack](12-network/)** | TCP/UDP, DHCP, network configuration |
+| **[13. UEFI Variables](13-variables/)** | Persistent storage, boot options, Secure Boot |
 
 ## Service Architecture
 

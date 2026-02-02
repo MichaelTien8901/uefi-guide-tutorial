@@ -928,8 +928,8 @@ typedef struct _EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 9: Graphics Output](09-graphics-output.html) - Graphics and video
-- [Chapter 10: File System Access](10-file-system.html) - File operations
+- [Chapter 9: Graphics Output](09-graphics-output/) - Graphics and video
+- [Chapter 10: File System Access](10-file-system/) - File operations
 
 ---
 

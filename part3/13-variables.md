@@ -990,7 +990,7 @@ EFI_STATUS QueryVariableInfo(
 ## Next Steps
 
 - [Part 4: Advanced Topics](../part4/) - PEI, DXE, SMM, Security
-- [Chapter 14: PEI Phase](../part4/14-pei-phase.html) - Pre-EFI Initialization
+- [Chapter 14: PEI Phase](../part4/14-pei-phase/) - Pre-EFI Initialization
 
 ---
 

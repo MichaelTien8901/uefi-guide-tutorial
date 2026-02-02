@@ -1036,7 +1036,7 @@ typedef struct _EFI_SIMPLE_NETWORK_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 13: UEFI Variables](13-variables.html) - Variable storage
+- [Chapter 13: UEFI Variables](13-variables/) - Variable storage
 - [Part 4: Advanced Topics](../part4/) - PEI, DXE, SMM
 
 ---
