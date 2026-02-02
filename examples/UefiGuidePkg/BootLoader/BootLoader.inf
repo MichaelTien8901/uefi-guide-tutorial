@@ -1,0 +1,42 @@
+## @file
+#  Custom Boot Loader Example
+#
+#  Demonstrates loading OS kernel and boot process concepts.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = BootLoader
+  FILE_GUID                      = 25364758-697A-8B9C-0E0F-101112130011
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = BootLoaderMain
+
+[Sources]
+  BootLoader.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  DevicePathLib
+  PrintLib
+
+[Guids]
+  gEfiFileInfoGuid
+  gEfiAcpi20TableGuid
+  gEfiAcpi10TableGuid
+
+[Protocols]
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiGraphicsOutputProtocolGuid

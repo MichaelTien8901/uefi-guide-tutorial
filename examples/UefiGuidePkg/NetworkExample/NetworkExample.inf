@@ -1,0 +1,41 @@
+## @file
+#  Network Example
+#
+#  Demonstrates UEFI network stack: interfaces, IP config, UDP.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = NetworkExample
+  FILE_GUID                      = 81920314-2536-4758-0A0B-0C0D0E0F0007
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = NetworkExampleMain
+
+[Sources]
+  NetworkExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  NetworkPkg/NetworkPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  PrintLib
+
+[Protocols]
+  gEfiSimpleNetworkProtocolGuid        ## CONSUMES
+  gEfiManagedNetworkProtocolGuid       ## SOMETIMES_CONSUMES
+  gEfiIp4ProtocolGuid                  ## SOMETIMES_CONSUMES
+  gEfiIp4Config2ProtocolGuid           ## SOMETIMES_CONSUMES
+  gEfiUdp4ProtocolGuid                 ## SOMETIMES_CONSUMES
+  gEfiUdp4ServiceBindingProtocolGuid   ## SOMETIMES_CONSUMES
+  gEfiTcp4ProtocolGuid                 ## SOMETIMES_CONSUMES
+  gEfiDhcp4ProtocolGuid                ## SOMETIMES_CONSUMES

@@ -73,30 +73,27 @@
   UefiGuidePkg/HelloWorld/HelloWorld.inf
 
   #
-  # Part 2: Core Concepts (uncomment as examples are added)
+  # Part 2: Core Concepts
   #
-  # UefiGuidePkg/DriverExample/DriverExample.inf
-  # UefiGuidePkg/ProtocolExample/ProtocolExample.inf
-  # UefiGuidePkg/MemoryExample/MemoryExample.inf
-  # UefiGuidePkg/ServicesExample/ServicesExample.inf
+  UefiGuidePkg/DriverExample/DriverExample.inf
+  UefiGuidePkg/ProtocolExample/ProtocolExample.inf
+  UefiGuidePkg/MemoryExample/MemoryExample.inf
 
   #
   # Part 3: Essential Services
   #
-  # UefiGuidePkg/ConsoleExample/ConsoleExample.inf
-  # UefiGuidePkg/GopExample/GopExample.inf
-  # UefiGuidePkg/FileSystemExample/FileSystemExample.inf
-  # UefiGuidePkg/BlockIoExample/BlockIoExample.inf
-  # UefiGuidePkg/NetworkExample/NetworkExample.inf
-  # UefiGuidePkg/VariablesExample/VariablesExample.inf
+  UefiGuidePkg/ConsoleExample/ConsoleExample.inf
+  UefiGuidePkg/GopExample/GopExample.inf
+  UefiGuidePkg/FileSystemExample/FileSystemExample.inf
+  UefiGuidePkg/NetworkExample/NetworkExample.inf
 
   #
   # Part 5: Practical Projects
   #
-  # UefiGuidePkg/ShellCommand/ShellCommand.inf
-  # UefiGuidePkg/BootMenu/BootMenu.inf
-  # UefiGuidePkg/NetworkApp/NetworkApp.inf
-  # UefiGuidePkg/BootLoader/BootLoader.inf
+  UefiGuidePkg/ShellCommand/ShellCommand.inf
+  UefiGuidePkg/BootMenu/BootMenu.inf
+  UefiGuidePkg/NetworkApp/NetworkApp.inf
+  UefiGuidePkg/BootLoader/BootLoader.inf
 
 [BuildOptions]
   #

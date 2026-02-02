@@ -1,0 +1,31 @@
+## @file
+#  Console I/O Example
+#
+#  Demonstrates UEFI console input/output, colors, and cursor control.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = ConsoleExample
+  FILE_GUID                      = 5E6F7081-9203-1425-D6E7-F80A0B0C0004
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = ConsoleExampleMain
+
+[Sources]
+  ConsoleExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+
+[Protocols]
+  gEfiSimpleTextInProtocolGuid   ## CONSUMES
+  gEfiSimpleTextOutProtocolGuid  ## CONSUMES

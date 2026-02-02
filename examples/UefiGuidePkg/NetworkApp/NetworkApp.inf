@@ -1,0 +1,40 @@
+## @file
+#  Network Application Example
+#
+#  Demonstrates practical network operations: DNS, TCP, HTTP concepts.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = NetworkApp
+  FILE_GUID                      = 14253647-5869-7A8B-0D0E-0F1011120010
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = NetworkAppMain
+
+[Sources]
+  NetworkApp.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  NetworkPkg/NetworkPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  PrintLib
+
+[Protocols]
+  gEfiDns4ProtocolGuid                 ## SOMETIMES_CONSUMES
+  gEfiDns4ServiceBindingProtocolGuid   ## SOMETIMES_CONSUMES
+  gEfiHttpProtocolGuid                 ## SOMETIMES_CONSUMES
+  gEfiTcp4ProtocolGuid                 ## SOMETIMES_CONSUMES
+  gEfiTcp4ServiceBindingProtocolGuid   ## SOMETIMES_CONSUMES
+  gEfiIp4ProtocolGuid                  ## SOMETIMES_CONSUMES
+  gEfiIp4Config2ProtocolGuid           ## CONSUMES

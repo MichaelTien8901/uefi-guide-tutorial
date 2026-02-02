@@ -1,0 +1,32 @@
+## @file
+#  UEFI Driver Model Example
+#
+#  Demonstrates the UEFI driver binding protocol with Supported, Start, Stop.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = DriverExample
+  FILE_GUID                      = 2B3C4D5E-6F70-8192-A3B4-C5D6E7F80001
+  MODULE_TYPE                    = UEFI_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = DriverExampleEntryPoint
+
+[Sources]
+  DriverExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  DebugLib
+
+[Protocols]
+  gEfiDriverBindingProtocolGuid    ## PRODUCES
+  gEfiPciIoProtocolGuid            ## CONSUMES

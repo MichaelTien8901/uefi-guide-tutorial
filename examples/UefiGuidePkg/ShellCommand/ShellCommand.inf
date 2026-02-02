@@ -1,0 +1,39 @@
+## @file
+#  Custom Shell Command Example
+#
+#  Demonstrates creating UEFI Shell commands with argument parsing.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = ShellCommand
+  FILE_GUID                      = 92031425-3647-5869-0B0C-0D0E0F100008
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = ShellCommandMain
+
+[Sources]
+  ShellCommand.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  ShellPkg/ShellPkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+  ShellLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  PrintLib
+
+[Guids]
+  gEfiGlobalVariableGuid
+
+[Protocols]
+  gEfiShellProtocolGuid

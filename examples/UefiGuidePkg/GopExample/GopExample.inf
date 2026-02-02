@@ -1,0 +1,32 @@
+## @file
+#  Graphics Output Protocol Example
+#
+#  Demonstrates UEFI graphics with GOP: video modes, drawing, Blt operations.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = GopExample
+  FILE_GUID                      = 6F708192-0314-2536-E7F8-0A0B0C0D0005
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = GopExampleMain
+
+[Sources]
+  GopExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid  ## CONSUMES

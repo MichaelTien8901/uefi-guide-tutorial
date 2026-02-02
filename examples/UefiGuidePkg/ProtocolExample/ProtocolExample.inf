@@ -1,0 +1,29 @@
+## @file
+#  Protocol Example
+#
+#  Demonstrates creating, installing, and using custom UEFI protocols.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = ProtocolExample
+  FILE_GUID                      = 3C4D5E6F-7081-9203-B4C5-D6E7F8090002
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = ProtocolExampleMain
+
+[Sources]
+  ProtocolExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  DebugLib

@@ -1,0 +1,30 @@
+## @file
+#  Memory Services Example
+#
+#  Demonstrates UEFI memory allocation: pool, pages, and memory map.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = MemoryExample
+  FILE_GUID                      = 4D5E6F70-8192-0314-C5D6-E7F80A0B0003
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = MemoryExampleMain
+
+[Sources]
+  MemoryExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  DebugLib
