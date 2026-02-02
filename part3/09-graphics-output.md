@@ -955,7 +955,7 @@ typedef struct {
 ## Next Steps
 
 - [Chapter 10: File System Access](10-file-system.html) - File operations
-- [Chapter 11: Network Protocols](11-network.html) - Network stack
+- [Chapter 11: Block I/O](11-block-io.html) - Block device access
 
 ---
 
