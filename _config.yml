@@ -8,8 +8,8 @@ url: ""
 theme: just-the-docs
 color_scheme: dark
 
-# Logo and favicon
-logo: "/assets/images/uefi-logo.png"
+# Logo and favicon (disabled - no logo file)
+# logo: "/assets/images/uefi-logo.png"
 
 # Search
 search_enabled: true
