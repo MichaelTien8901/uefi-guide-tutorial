@@ -18,16 +18,16 @@ Dive deep into firmware internals and security.
 
 | Chapter | Topics |
 |:--------|:-------|
-| **[14. PEI Phase](14-pei-phase.md)** | PEIMs, PPIs, HOBs, memory initialization |
-| **[15. DXE Phase](15-dxe-phase.md)** | Dispatcher, architectural protocols, events |
-| **[16. SMM](16-smm.md)** | System Management Mode, security isolation |
-| **[17. Security](17-security.md)** | Secure Boot, TPM, measured boot |
-| **[18. ACPI](18-acpi.md)** | Table installation, ASL basics |
-| **[19. Capsule Updates](19-capsule-updates.md)** | Firmware update mechanism |
-| **[20. BMC Integration](20-bmc-integration.md)** | IPMI, Redfish, BMC-UEFI communication |
-| **[21. RAS Features](21-ras-features.md)** | WHEA, APEI, error handling, reliability |
-| **[22. eSPI Interface](22-espi.md)** | Virtual wires, flash access, EC/BMC communication, eDAF |
-| **[23. ARM UEFI](23-arm-uefi/)** | Environment setup, TF-A, SystemReady, ARM debugging |
+| **[14. PEI Phase]({% link part4/14-pei-phase.md %})** | PEIMs, PPIs, HOBs, memory initialization |
+| **[15. DXE Phase]({% link part4/15-dxe-phase.md %})** | Dispatcher, architectural protocols, events |
+| **[16. SMM]({% link part4/16-smm.md %})** | System Management Mode, security isolation |
+| **[17. Security]({% link part4/17-security.md %})** | Secure Boot, TPM, measured boot |
+| **[18. ACPI]({% link part4/18-acpi.md %})** | Table installation, ASL basics |
+| **[19. Capsule Updates]({% link part4/19-capsule-updates.md %})** | Firmware update mechanism |
+| **[20. BMC Integration]({% link part4/20-bmc-integration.md %})** | IPMI, Redfish, BMC-UEFI communication |
+| **[21. RAS Features]({% link part4/21-ras-features.md %})** | WHEA, APEI, error handling, reliability |
+| **[22. eSPI Interface]({% link part4/22-espi.md %})** | Virtual wires, flash access, EC/BMC communication, eDAF |
+| **[23. ARM UEFI]({% link part4/23-arm-uefi/index.md %})** | Environment setup, TF-A, SystemReady, ARM debugging |
 
 ## Boot Phase Deep Dive
 

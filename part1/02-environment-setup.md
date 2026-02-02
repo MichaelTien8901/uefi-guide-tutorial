@@ -822,7 +822,7 @@ Build result:
 
 ## Next Steps
 
-- [Chapter 3: Hello World](03-hello-world.md) - Build your first UEFI application
+- [Chapter 3: Hello World]({% link part1/03-hello-world.md %}) - Build your first UEFI application
 
 ---
 

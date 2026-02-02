@@ -929,8 +929,8 @@ typedef struct _EFI_BLOCK_IO2_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 12: Network Stack](12-network.md) - Network protocols
-- [Chapter 13: UEFI Variables](13-variables.md) - Variable storage
+- [Chapter 12: Network Stack]({% link part3/12-network.md %}) - Network protocols
+- [Chapter 13: UEFI Variables]({% link part3/13-variables.md %}) - Variable storage
 
 ---
 

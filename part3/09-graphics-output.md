@@ -954,8 +954,8 @@ typedef struct {
 
 ## Next Steps
 
-- [Chapter 10: File System Access](10-file-system.md) - File operations
-- [Chapter 11: Block I/O](11-block-io.md) - Block device access
+- [Chapter 10: File System Access]({% link part3/10-file-system.md %}) - File operations
+- [Chapter 11: Block I/O]({% link part3/11-block-io.md %}) - Block device access
 
 ---
 

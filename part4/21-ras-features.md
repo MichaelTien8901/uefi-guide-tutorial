@@ -2110,8 +2110,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 22: eSPI Interface](22-espi.md) - Enhanced SPI
-- [Chapter 23: ARM UEFI](23-arm-uefi/) - ARM development
+- [Chapter 22: eSPI Interface]({% link part4/22-espi.md %}) - Enhanced SPI
+- [Chapter 23: ARM UEFI]({% link part4/23-arm-uefi/index.md %}) - ARM development
 
 ---
 

@@ -992,4 +992,4 @@ qemu-system-x86_64 \
 
 ---
 
-*Next: [Chapter 26: Network Application](../26-network-app/) - Build an HTTP client.*
+*Next: [Chapter 26: Network Application]({% link part5/26-network-app.md %}) - Build an HTTP client.*

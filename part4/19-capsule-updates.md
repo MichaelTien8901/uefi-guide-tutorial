@@ -754,8 +754,8 @@ WriteCapsuleToDisk (
 
 ## Next Steps
 
-- [Chapter 20: BMC Integration](20-bmc-integration.md) - Server management
-- [Chapter 21: RAS Features](21-ras-features.md) - Reliability features
+- [Chapter 20: BMC Integration]({% link part4/20-bmc-integration.md %}) - Server management
+- [Chapter 21: RAS Features]({% link part4/21-ras-features.md %}) - Reliability features
 
 ---
 

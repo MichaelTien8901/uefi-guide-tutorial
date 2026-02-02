@@ -842,4 +842,4 @@ InstallAcpiTables (
 
 ---
 
-*Next: [Section 23.7: Debugging Techniques](../23-7-debugging/) - JTAG, ETM, and exception analysis.*
+*Next: [Section 23.7: Debugging Techniques]({% link part4/23-arm-uefi/23-7-debugging.md %}) - JTAG, ETM, and exception analysis.*

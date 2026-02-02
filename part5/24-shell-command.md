@@ -935,4 +935,4 @@ Boot Configuration:
 
 ---
 
-*Next: [Chapter 25: Graphical Boot Menu](../25-boot-menu/) - Build a visual boot option selector.*
+*Next: [Chapter 25: Graphical Boot Menu]({% link part5/25-boot-menu.md %}) - Build a visual boot option selector.*

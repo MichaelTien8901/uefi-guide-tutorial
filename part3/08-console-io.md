@@ -927,8 +927,8 @@ typedef struct _EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 9: Graphics Output](09-graphics-output.md) - Graphics and video
-- [Chapter 10: File System Access](10-file-system.md) - File operations
+- [Chapter 9: Graphics Output]({% link part3/09-graphics-output.md %}) - Graphics and video
+- [Chapter 10: File System Access]({% link part3/10-file-system.md %}) - File operations
 
 ---
 

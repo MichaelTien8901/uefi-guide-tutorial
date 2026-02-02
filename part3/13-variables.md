@@ -988,8 +988,8 @@ EFI_STATUS QueryVariableInfo(
 
 ## Next Steps
 
-- [Part 4: Advanced Topics](../part4/) - PEI, DXE, SMM, Security
-- [Chapter 14: PEI Phase](../part4/14-pei-phase.md) - Pre-EFI Initialization
+- [Part 4: Advanced Topics]({% link part4/index.md %}) - PEI, DXE, SMM, Security
+- [Chapter 14: PEI Phase]({% link part4/14-pei-phase.md %}) - Pre-EFI Initialization
 
 ---
 

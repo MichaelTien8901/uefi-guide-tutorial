@@ -903,4 +903,4 @@ DumpSystemRegisters (
 
 ---
 
-*Next: [Section 23.8: Porting Guide](../23-8-porting-guide/) - New platform bringup and validation.*
+*Next: [Section 23.8: Porting Guide]({% link part4/23-arm-uefi/23-8-porting-guide.md %}) - New platform bringup and validation.*

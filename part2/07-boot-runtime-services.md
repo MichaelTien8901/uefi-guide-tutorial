@@ -687,8 +687,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Part 3: Essential Services](../part3/) - Console, Graphics, File System
-- [Chapter 8: Console I/O](../part3/08-console-io.md) - Text input/output
+- [Part 3: Essential Services]({% link part3/index.md %}) - Console, Graphics, File System
+- [Chapter 8: Console I/O]({% link part3/08-console-io.md %}) - Text input/output
 
 ---
 

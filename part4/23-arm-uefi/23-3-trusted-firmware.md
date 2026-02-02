@@ -692,4 +692,4 @@ aarch64-linux-gnu-gdb
 
 ---
 
-*Next: [Section 23.4: SystemReady Compliance](../23-4-systemready/) - Certification requirements and testing.*
+*Next: [Section 23.4: SystemReady Compliance]({% link part4/23-arm-uefi/23-4-systemready.md %}) - Certification requirements and testing.*

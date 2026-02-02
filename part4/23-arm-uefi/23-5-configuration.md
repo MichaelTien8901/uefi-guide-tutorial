@@ -658,4 +658,4 @@ sequenceDiagram
 
 ---
 
-*Next: [Section 23.6: Device Tree & ACPI](../23-6-dt-acpi/) - Hardware description for ARM platforms.*
+*Next: [Section 23.6: Device Tree & ACPI]({% link part4/23-arm-uefi/23-6-dt-acpi.md %}) - Hardware description for ARM platforms.*

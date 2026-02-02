@@ -1026,8 +1026,8 @@ typedef struct {
 
 ## Next Steps
 
-- [Chapter 11: Block I/O](11-block-io.md) - Low-level storage access
-- [Chapter 12: Network Stack](12-network.md) - Network protocols
+- [Chapter 11: Block I/O]({% link part3/11-block-io.md %}) - Low-level storage access
+- [Chapter 12: Network Stack]({% link part3/12-network.md %}) - Network protocols
 
 ---
 

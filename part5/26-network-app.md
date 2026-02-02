@@ -1119,4 +1119,4 @@ Shell> netutil get http://10.0.2.2:8080/test.txt output.txt
 
 ---
 
-*Next: [Chapter 27: Boot Loader](../27-boot-loader/) - Load and execute a kernel.*
+*Next: [Chapter 27: Boot Loader]({% link part5/27-boot-loader.md %}) - Load and execute a kernel.*

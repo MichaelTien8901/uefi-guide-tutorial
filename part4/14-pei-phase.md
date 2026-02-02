@@ -870,8 +870,8 @@ PlatformPeiEntryPoint (
 
 ## Next Steps
 
-- [Chapter 15: DXE Phase](15-dxe-phase.md) - Driver execution environment
-- [Chapter 16: SMM](16-smm.md) - System Management Mode
+- [Chapter 15: DXE Phase]({% link part4/15-dxe-phase.md %}) - Driver execution environment
+- [Chapter 16: SMM]({% link part4/16-smm.md %}) - System Management Mode
 
 ---
 

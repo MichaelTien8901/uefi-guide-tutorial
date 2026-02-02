@@ -515,4 +515,4 @@ echo "=== BaseTools ===" && [ -f ~/arm-uefi-workspace/edk2/BaseTools/Source/C/bi
 
 ---
 
-*Next: [Section 23.2: ARM Boot Architecture](../23-2-boot-architecture/) - Understanding ARM exception levels and boot flow.*
+*Next: [Section 23.2: ARM Boot Architecture]({% link part4/23-arm-uefi/23-2-boot-architecture.md %}) - Understanding ARM exception levels and boot flow.*

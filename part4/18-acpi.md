@@ -735,8 +735,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 19: Capsule Updates](19-capsule-updates.md) - Firmware updates
-- [Chapter 20: BMC Integration](20-bmc-integration.md) - Server management
+- [Chapter 19: Capsule Updates]({% link part4/19-capsule-updates.md %}) - Firmware updates
+- [Chapter 20: BMC Integration]({% link part4/20-bmc-integration.md %}) - Server management
 
 ---
 

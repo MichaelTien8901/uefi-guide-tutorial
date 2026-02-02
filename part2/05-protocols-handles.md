@@ -720,8 +720,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 6: Memory Services](06-memory-services.md) - Memory allocation and management
-- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services.md) - Service availability
+- [Chapter 6: Memory Services]({% link part2/06-memory-services.md %}) - Memory allocation and management
+- [Chapter 7: Boot & Runtime Services]({% link part2/07-boot-runtime-services.md %}) - Service availability
 
 ---
 

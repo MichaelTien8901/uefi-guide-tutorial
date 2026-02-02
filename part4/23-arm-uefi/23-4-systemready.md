@@ -629,4 +629,4 @@ echo "Results saved to $RESULTS_DIR/"
 
 ---
 
-*Next: [Section 23.5: Platform Configuration](../23-5-configuration/) - PCDs, memory map, and GIC setup.*
+*Next: [Section 23.5: Platform Configuration]({% link part4/23-arm-uefi/23-5-configuration.md %}) - PCDs, memory map, and GIC setup.*

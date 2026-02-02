@@ -780,8 +780,8 @@ VariableSmmEntryPoint (
 
 ## Next Steps
 
-- [Chapter 17: Security](17-security.md) - Secure Boot, TPM
-- [Chapter 18: ACPI](18-acpi.md) - ACPI tables
+- [Chapter 17: Security]({% link part4/17-security.md %}) - Secure Boot, TPM
+- [Chapter 18: ACPI]({% link part4/18-acpi.md %}) - ACPI tables
 
 ---
 

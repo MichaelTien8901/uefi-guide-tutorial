@@ -398,8 +398,8 @@ Runtime Services survive `ExitBootServices()` and are available to the OS:
 
 ## Next Steps
 
-- [Chapter 2: Environment Setup](02-environment-setup.md) - Set up your development environment
-- [Chapter 3: Hello World](03-hello-world.md) - Build your first UEFI application
+- [Chapter 2: Environment Setup]({% link part1/02-environment-setup.md %}) - Set up your development environment
+- [Chapter 3: Hello World]({% link part1/03-hello-world.md %}) - Build your first UEFI application
 
 ---
 

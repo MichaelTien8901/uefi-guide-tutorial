@@ -816,4 +816,4 @@ GicV3EnableInterruptSource(30);  // NS physical timer
 
 ---
 
-*This concludes Chapter 23: ARM UEFI Development. Return to [Chapter Index](../index/) or continue to [Part 5: Practical Projects](/part5/).*
+*This concludes Chapter 23: ARM UEFI Development. Return to [Chapter Index]({% link part4/23-arm-uefi/index.md %}) or continue to [Part 5: Practical Projects]({% link part5/index.md %}).*

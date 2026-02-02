@@ -646,4 +646,4 @@ sequenceDiagram
 
 ---
 
-*Next: [Section 23.3: Trusted Firmware-A](../23-3-trusted-firmware/) - Deep dive into TF-A integration.*
+*Next: [Section 23.3: Trusted Firmware-A]({% link part4/23-arm-uefi/23-3-trusted-firmware.md %}) - Deep dive into TF-A integration.*

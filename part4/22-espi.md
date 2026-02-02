@@ -771,8 +771,8 @@ ConfigureFlashProtection (
 
 ## Next Steps
 
-- [Chapter 23: ARM UEFI](23-arm-uefi/) - ARM development
-- [Part 5: Practical Projects](../part5/) - Hands-on examples
+- [Chapter 23: ARM UEFI]({% link part4/23-arm-uefi/index.md %}) - ARM development
+- [Part 5: Practical Projects]({% link part5/index.md %}) - Hands-on examples
 
 ---
 
