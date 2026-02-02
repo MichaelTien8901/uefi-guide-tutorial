@@ -3,6 +3,7 @@ layout: default
 title: "21. RAS Features"
 parent: "Part 4: Advanced Topics"
 nav_order: 8
+permalink: /part4/21-ras-features/
 ---
 
 # Chapter 21: RAS Features

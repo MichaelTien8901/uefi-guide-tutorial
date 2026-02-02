@@ -3,6 +3,7 @@ layout: default
 title: "20. BMC Integration"
 parent: "Part 4: Advanced Topics"
 nav_order: 7
+permalink: /part4/20-bmc-integration/
 ---
 
 # Chapter 20: BMC Integration

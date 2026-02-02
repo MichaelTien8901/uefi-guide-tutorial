@@ -3,6 +3,7 @@ layout: default
 title: "16. SMM"
 parent: "Part 4: Advanced Topics"
 nav_order: 3
+permalink: /part4/16-smm/
 ---
 
 # Chapter 16: SMM

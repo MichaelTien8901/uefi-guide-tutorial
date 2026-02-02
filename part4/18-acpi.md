@@ -3,6 +3,7 @@ layout: default
 title: "18. ACPI"
 parent: "Part 4: Advanced Topics"
 nav_order: 5
+permalink: /part4/18-acpi/
 ---
 
 # Chapter 18: ACPI

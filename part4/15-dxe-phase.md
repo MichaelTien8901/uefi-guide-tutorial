@@ -3,6 +3,7 @@ layout: default
 title: "15. DXE Phase"
 parent: "Part 4: Advanced Topics"
 nav_order: 2
+permalink: /part4/15-dxe-phase/
 ---
 
 # Chapter 15: DXE Phase

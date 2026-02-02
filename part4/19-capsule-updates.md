@@ -3,6 +3,7 @@ layout: default
 title: "19. Capsule Updates"
 parent: "Part 4: Advanced Topics"
 nav_order: 6
+permalink: /part4/19-capsule-updates/
 ---
 
 # Chapter 19: Capsule Updates

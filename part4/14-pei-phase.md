@@ -3,6 +3,7 @@ layout: default
 title: "14. PEI Phase"
 parent: "Part 4: Advanced Topics"
 nav_order: 1
+permalink: /part4/14-pei-phase/
 ---
 
 # Chapter 14: PEI Phase

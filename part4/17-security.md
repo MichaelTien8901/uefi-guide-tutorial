@@ -3,6 +3,7 @@ layout: default
 title: "17. Security"
 parent: "Part 4: Advanced Topics"
 nav_order: 4
+permalink: /part4/17-security/
 ---
 
 # Chapter 17: Security
