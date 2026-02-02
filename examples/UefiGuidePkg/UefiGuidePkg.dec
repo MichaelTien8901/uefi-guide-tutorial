@@ -1,0 +1,31 @@
+## @file
+#  UEFI Guide Tutorial Package Declaration
+#
+#  This package contains example code for the UEFI Development Guide tutorial.
+#  All examples are designed to be educational and demonstrate UEFI concepts.
+#
+#  Copyright (c) 2024, UEFI Guide Contributors. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  DEC_SPECIFICATION              = 0x00010017
+  PACKAGE_NAME                   = UefiGuidePkg
+  PACKAGE_GUID                   = 8B24F7E4-5A3D-4C8B-9E2F-1A6B7C8D9E0F
+  PACKAGE_VERSION                = 1.0
+
+[Includes]
+  Include
+
+[LibraryClasses]
+
+[Guids]
+  ## UEFI Guide Package Token Space GUID
+  gUefiGuidePkgTokenSpaceGuid = { 0x12345678, 0x1234, 0x1234, { 0x12, 0x34, 0x56, 0x78, 0x9a, 0xbc, 0xde, 0xf0 }}
+
+[Protocols]
+
+[PcdsFixedAtBuild]
+
+[PcdsFeatureFlag]

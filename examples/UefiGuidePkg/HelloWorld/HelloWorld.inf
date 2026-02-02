@@ -1,0 +1,40 @@
+## @file
+#  Hello World UEFI Application
+#
+#  A minimal UEFI application that prints "Hello, UEFI World!" to the console.
+#  This serves as the starting point for UEFI development.
+#
+#  Copyright (c) 2024, UEFI Guide Contributors. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = HelloWorld
+  FILE_GUID                      = 4ea97c46-7491-4dfd-b442-747010f3ce5f
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = UefiMain
+
+#
+# VALID_ARCHITECTURES = IA32 X64 AARCH64 RISCV64
+#
+
+#
+# Sources - C files to compile
+#
+[Sources]
+  HelloWorld.c
+
+#
+# Packages - DEC files that declare GUIDs, protocols, libraries
+#
+[Packages]
+  MdePkg/MdePkg.dec
+
+#
+# LibraryClasses - Libraries to link
+#
+[LibraryClasses]
+  UefiApplicationEntryPoint      # Provides application entry wrapper
+  UefiLib                        # Provides Print() and helpers
