@@ -3,7 +3,6 @@ layout: default
 title: "21. RAS Features"
 parent: "Part 4: Advanced Topics"
 nav_order: 8
-permalink: /part4/21-ras-features/
 ---
 
 # Chapter 21: RAS Features
@@ -2111,7 +2110,7 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 22: eSPI Interface](22-espi/) - Enhanced SPI
+- [Chapter 22: eSPI Interface](22-espi.md) - Enhanced SPI
 - [Chapter 23: ARM UEFI](23-arm-uefi/) - ARM development
 
 ---

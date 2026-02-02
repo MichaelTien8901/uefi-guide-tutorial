@@ -3,7 +3,6 @@ layout: default
 title: "22. eSPI Interface"
 parent: "Part 4: Advanced Topics"
 nav_order: 9
-permalink: /part4/22-espi/
 ---
 
 # Chapter 22: eSPI Interface

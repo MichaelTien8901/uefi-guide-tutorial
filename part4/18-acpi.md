@@ -3,7 +3,6 @@ layout: default
 title: "18. ACPI"
 parent: "Part 4: Advanced Topics"
 nav_order: 5
-permalink: /part4/18-acpi/
 ---
 
 # Chapter 18: ACPI
@@ -736,8 +735,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 19: Capsule Updates](19-capsule-updates/) - Firmware updates
-- [Chapter 20: BMC Integration](20-bmc-integration/) - Server management
+- [Chapter 19: Capsule Updates](19-capsule-updates.md) - Firmware updates
+- [Chapter 20: BMC Integration](20-bmc-integration.md) - Server management
 
 ---
 

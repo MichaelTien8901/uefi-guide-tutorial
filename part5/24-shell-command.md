@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Chapter 24: Custom Shell Command"
-permalink: /part5/24-shell-command/
 nav_order: 24
 parent: "Part 5: Practical Projects"
 ---

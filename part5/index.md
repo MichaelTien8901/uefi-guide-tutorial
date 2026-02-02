@@ -18,10 +18,10 @@ Build complete, real-world UEFI applications.
 
 | Chapter | Project | Description | Key Skills |
 |:--------|:--------|:------------|:-----------|
-| **[24. Shell Command](24-shell-command/)** | Custom Shell Command | Argument parsing, help text, output formatting | ShellPkg, ShellLib |
-| **[25. Boot Menu](25-boot-menu/)** | Graphical Boot Menu | Visual boot selector with keyboard navigation | GOP, input, boot options |
-| **[26. Network App](26-network-app/)** | Network Application | HTTP client and network diagnostics | TCP4, HTTP, DNS |
-| **[27. Boot Loader](27-boot-loader/)** | Custom Boot Loader | Load and execute kernel images | File I/O, ExitBootServices |
+| **[24. Shell Command](24-shell-command.md)** | Custom Shell Command | Argument parsing, help text, output formatting | ShellPkg, ShellLib |
+| **[25. Boot Menu](25-boot-menu.md)** | Graphical Boot Menu | Visual boot selector with keyboard navigation | GOP, input, boot options |
+| **[26. Network App](26-network-app.md)** | Network Application | HTTP client and network diagnostics | TCP4, HTTP, DNS |
+| **[27. Boot Loader](27-boot-loader.md)** | Custom Boot Loader | Load and execute kernel images | File I/O, ExitBootServices |
 
 ## Project Architecture
 

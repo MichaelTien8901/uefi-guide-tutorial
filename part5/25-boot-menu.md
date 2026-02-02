@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Chapter 25: Graphical Boot Menu"
-permalink: /part5/25-boot-menu/
 nav_order: 25
 parent: "Part 5: Practical Projects"
 ---

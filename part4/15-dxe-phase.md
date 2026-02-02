@@ -3,7 +3,6 @@ layout: default
 title: "15. DXE Phase"
 parent: "Part 4: Advanced Topics"
 nav_order: 2
-permalink: /part4/15-dxe-phase/
 ---
 
 # Chapter 15: DXE Phase
@@ -798,8 +797,8 @@ PlatformDxeEntryPoint (
 
 ## Next Steps
 
-- [Chapter 16: SMM](16-smm/) - System Management Mode
-- [Chapter 17: Security](17-security/) - Secure Boot, TPM
+- [Chapter 16: SMM](16-smm.md) - System Management Mode
+- [Chapter 17: Security](17-security.md) - Secure Boot, TPM
 
 ---
 

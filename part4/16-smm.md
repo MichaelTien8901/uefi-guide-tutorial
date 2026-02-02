@@ -3,7 +3,6 @@ layout: default
 title: "16. SMM"
 parent: "Part 4: Advanced Topics"
 nav_order: 3
-permalink: /part4/16-smm/
 ---
 
 # Chapter 16: SMM
@@ -781,8 +780,8 @@ VariableSmmEntryPoint (
 
 ## Next Steps
 
-- [Chapter 17: Security](17-security/) - Secure Boot, TPM
-- [Chapter 18: ACPI](18-acpi/) - ACPI tables
+- [Chapter 17: Security](17-security.md) - Secure Boot, TPM
+- [Chapter 18: ACPI](18-acpi.md) - ACPI tables
 
 ---
 

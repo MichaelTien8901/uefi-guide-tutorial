@@ -3,7 +3,6 @@ layout: default
 title: "11. Block I/O"
 parent: "Part 3: Essential Services"
 nav_order: 4
-permalink: /part3/11-block-io/
 ---
 
 # Chapter 11: Block I/O
@@ -930,8 +929,8 @@ typedef struct _EFI_BLOCK_IO2_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 12: Network Stack](12-network/) - Network protocols
-- [Chapter 13: UEFI Variables](13-variables/) - Variable storage
+- [Chapter 12: Network Stack](12-network.md) - Network protocols
+- [Chapter 13: UEFI Variables](13-variables.md) - Variable storage
 
 ---
 

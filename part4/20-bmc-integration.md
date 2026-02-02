@@ -3,7 +3,6 @@ layout: default
 title: "20. BMC Integration"
 parent: "Part 4: Advanced Topics"
 nav_order: 7
-permalink: /part4/20-bmc-integration/
 ---
 
 # Chapter 20: BMC Integration
@@ -910,8 +909,8 @@ Exit:
 
 ## Next Steps
 
-- [Chapter 21: RAS Features](21-ras-features/) - Reliability features
-- [Chapter 22: eSPI Interface](22-espi/) - Enhanced SPI
+- [Chapter 21: RAS Features](21-ras-features.md) - Reliability features
+- [Chapter 22: eSPI Interface](22-espi.md) - Enhanced SPI
 
 ---
 

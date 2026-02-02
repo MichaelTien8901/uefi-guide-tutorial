@@ -3,7 +3,6 @@ layout: default
 title: "12. Network Stack"
 parent: "Part 3: Essential Services"
 nav_order: 5
-permalink: /part3/12-network/
 ---
 
 # Chapter 12: Network Stack
@@ -1036,7 +1035,7 @@ typedef struct _EFI_SIMPLE_NETWORK_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 13: UEFI Variables](13-variables/) - Variable storage
+- [Chapter 13: UEFI Variables](13-variables.md) - Variable storage
 - [Part 4: Advanced Topics](../part4/) - PEI, DXE, SMM
 
 ---

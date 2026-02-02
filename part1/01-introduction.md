@@ -3,7 +3,6 @@ layout: default
 title: "1. Introduction to UEFI"
 parent: "Part 1: Getting Started"
 nav_order: 1
-permalink: /part1/01-introduction/
 ---
 
 # Chapter 1: Introduction to UEFI
@@ -399,8 +398,8 @@ Runtime Services survive `ExitBootServices()` and are available to the OS:
 
 ## Next Steps
 
-- [Chapter 2: Environment Setup](02-environment-setup/) - Set up your development environment
-- [Chapter 3: Hello World](03-hello-world/) - Build your first UEFI application
+- [Chapter 2: Environment Setup](02-environment-setup.md) - Set up your development environment
+- [Chapter 3: Hello World](03-hello-world.md) - Build your first UEFI application
 
 ---
 

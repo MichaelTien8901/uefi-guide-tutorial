@@ -3,7 +3,6 @@ layout: default
 title: "9. Graphics Output"
 parent: "Part 3: Essential Services"
 nav_order: 2
-permalink: /part3/09-graphics-output/
 ---
 
 # Chapter 9: Graphics Output
@@ -955,8 +954,8 @@ typedef struct {
 
 ## Next Steps
 
-- [Chapter 10: File System Access](10-file-system/) - File operations
-- [Chapter 11: Block I/O](11-block-io/) - Block device access
+- [Chapter 10: File System Access](10-file-system.md) - File operations
+- [Chapter 11: Block I/O](11-block-io.md) - Block device access
 
 ---
 

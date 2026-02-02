@@ -3,7 +3,6 @@ layout: default
 title: "13. UEFI Variables"
 parent: "Part 3: Essential Services"
 nav_order: 6
-permalink: /part3/13-variables/
 ---
 
 # Chapter 13: UEFI Variables
@@ -990,7 +989,7 @@ EFI_STATUS QueryVariableInfo(
 ## Next Steps
 
 - [Part 4: Advanced Topics](../part4/) - PEI, DXE, SMM, Security
-- [Chapter 14: PEI Phase](../part4/14-pei-phase/) - Pre-EFI Initialization
+- [Chapter 14: PEI Phase](../part4/14-pei-phase.md) - Pre-EFI Initialization
 
 ---
 

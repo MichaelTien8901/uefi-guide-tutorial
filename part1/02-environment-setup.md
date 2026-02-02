@@ -3,7 +3,6 @@ layout: default
 title: "2. Environment Setup"
 parent: "Part 1: Getting Started"
 nav_order: 2
-permalink: /part1/02-environment-setup/
 ---
 
 # Chapter 2: Environment Setup
@@ -823,7 +822,7 @@ Build result:
 
 ## Next Steps
 
-- [Chapter 3: Hello World](03-hello-world/) - Build your first UEFI application
+- [Chapter 3: Hello World](03-hello-world.md) - Build your first UEFI application
 
 ---
 

@@ -3,7 +3,6 @@ layout: default
 title: "10. File System Access"
 parent: "Part 3: Essential Services"
 nav_order: 3
-permalink: /part3/10-file-system/
 ---
 
 # Chapter 10: File System Access
@@ -1027,8 +1026,8 @@ typedef struct {
 
 ## Next Steps
 
-- [Chapter 11: Block I/O](11-block-io/) - Low-level storage access
-- [Chapter 12: Network Stack](12-network/) - Network protocols
+- [Chapter 11: Block I/O](11-block-io.md) - Low-level storage access
+- [Chapter 12: Network Stack](12-network.md) - Network protocols
 
 ---
 

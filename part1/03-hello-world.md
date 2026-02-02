@@ -3,7 +3,6 @@ layout: default
 title: "3. Hello World"
 parent: "Part 1: Getting Started"
 nav_order: 3
-permalink: /part1/03-hello-world/
 ---
 
 # Chapter 3: Hello World
@@ -534,8 +533,8 @@ You've learned:
 
 ## Next Steps
 
-- [Chapter 4: Driver Model](../part2/04-driver-model/) - Learn about UEFI drivers
-- [Chapter 5: Protocols and Handles](../part2/05-protocols-handles/) - Understand protocol architecture
+- [Chapter 4: Driver Model](../part2/04-driver-model.md) - Learn about UEFI drivers
+- [Chapter 5: Protocols and Handles](../part2/05-protocols-handles.md) - Understand protocol architecture
 
 ---
 

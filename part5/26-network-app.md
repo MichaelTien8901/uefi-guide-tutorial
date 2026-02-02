@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Chapter 26: Network Application"
-permalink: /part5/26-network-app/
 nav_order: 26
 parent: "Part 5: Practical Projects"
 ---

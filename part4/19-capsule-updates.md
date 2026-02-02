@@ -3,7 +3,6 @@ layout: default
 title: "19. Capsule Updates"
 parent: "Part 4: Advanced Topics"
 nav_order: 6
-permalink: /part4/19-capsule-updates/
 ---
 
 # Chapter 19: Capsule Updates
@@ -755,8 +754,8 @@ WriteCapsuleToDisk (
 
 ## Next Steps
 
-- [Chapter 20: BMC Integration](20-bmc-integration/) - Server management
-- [Chapter 21: RAS Features](21-ras-features/) - Reliability features
+- [Chapter 20: BMC Integration](20-bmc-integration.md) - Server management
+- [Chapter 21: RAS Features](21-ras-features.md) - Reliability features
 
 ---
 

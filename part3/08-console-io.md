@@ -3,7 +3,6 @@ layout: default
 title: "8. Console I/O"
 parent: "Part 3: Essential Services"
 nav_order: 1
-permalink: /part3/08-console-io/
 ---
 
 # Chapter 8: Console I/O
@@ -928,8 +927,8 @@ typedef struct _EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
 
 ## Next Steps
 
-- [Chapter 9: Graphics Output](09-graphics-output/) - Graphics and video
-- [Chapter 10: File System Access](10-file-system/) - File operations
+- [Chapter 9: Graphics Output](09-graphics-output.md) - Graphics and video
+- [Chapter 10: File System Access](10-file-system.md) - File operations
 
 ---
 

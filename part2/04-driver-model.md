@@ -3,7 +3,6 @@ layout: default
 title: "4. Driver Model"
 parent: "Part 2: Core Concepts"
 nav_order: 1
-permalink: /part2/04-driver-model/
 ---
 
 # Chapter 4: UEFI Driver Model
@@ -605,8 +604,8 @@ MinimalDriverEntryPoint (
 
 ## Next Steps
 
-- [Chapter 5: Protocols and Handles](05-protocols-handles/) - Deep dive into protocol architecture
-- [Chapter 6: Memory Services](06-memory-services/) - Memory allocation in UEFI
+- [Chapter 5: Protocols and Handles](05-protocols-handles.md) - Deep dive into protocol architecture
+- [Chapter 6: Memory Services](06-memory-services.md) - Memory allocation in UEFI
 
 ---
 

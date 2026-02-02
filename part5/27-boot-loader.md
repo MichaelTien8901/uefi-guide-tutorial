@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Chapter 27: Custom Boot Loader"
-permalink: /part5/27-boot-loader/
 nav_order: 27
 parent: "Part 5: Practical Projects"
 ---

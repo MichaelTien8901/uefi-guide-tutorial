@@ -3,7 +3,6 @@ layout: default
 title: "6. Memory Services"
 parent: "Part 2: Core Concepts"
 nav_order: 3
-permalink: /part2/06-memory-services/
 ---
 
 # Chapter 6: Memory Services
@@ -655,7 +654,7 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services/) - Service availability and transitions
+- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services.md) - Service availability and transitions
 
 ---
 

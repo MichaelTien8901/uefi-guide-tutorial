@@ -3,7 +3,6 @@ layout: default
 title: "14. PEI Phase"
 parent: "Part 4: Advanced Topics"
 nav_order: 1
-permalink: /part4/14-pei-phase/
 ---
 
 # Chapter 14: PEI Phase
@@ -871,8 +870,8 @@ PlatformPeiEntryPoint (
 
 ## Next Steps
 
-- [Chapter 15: DXE Phase](15-dxe-phase/) - Driver execution environment
-- [Chapter 16: SMM](16-smm/) - System Management Mode
+- [Chapter 15: DXE Phase](15-dxe-phase.md) - Driver execution environment
+- [Chapter 16: SMM](16-smm.md) - System Management Mode
 
 ---
 

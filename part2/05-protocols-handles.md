@@ -3,7 +3,6 @@ layout: default
 title: "5. Protocols and Handles"
 parent: "Part 2: Core Concepts"
 nav_order: 2
-permalink: /part2/05-protocols-handles/
 ---
 
 # Chapter 5: Protocols and Handles
@@ -721,8 +720,8 @@ UefiMain (
 
 ## Next Steps
 
-- [Chapter 6: Memory Services](06-memory-services/) - Memory allocation and management
-- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services/) - Service availability
+- [Chapter 6: Memory Services](06-memory-services.md) - Memory allocation and management
+- [Chapter 7: Boot & Runtime Services](07-boot-runtime-services.md) - Service availability
 
 ---
 

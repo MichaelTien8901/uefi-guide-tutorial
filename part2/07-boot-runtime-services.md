@@ -3,7 +3,6 @@ layout: default
 title: "7. Boot & Runtime Services"
 parent: "Part 2: Core Concepts"
 nav_order: 4
-permalink: /part2/07-boot-runtime-services/
 ---
 
 # Chapter 7: Boot & Runtime Services
@@ -689,7 +688,7 @@ UefiMain (
 ## Next Steps
 
 - [Part 3: Essential Services](../part3/) - Console, Graphics, File System
-- [Chapter 8: Console I/O](../part3/08-console-io/) - Text input/output
+- [Chapter 8: Console I/O](../part3/08-console-io.md) - Text input/output
 
 ---
 
