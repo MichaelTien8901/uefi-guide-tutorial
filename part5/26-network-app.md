@@ -1107,6 +1107,11 @@ Shell> netutil get http://10.0.2.2:8080/test.txt output.txt
 4. **Proxy**: Add HTTP proxy support
 5. **IPv6**: Add IPv6 protocol support
 
+---
+
+{: .note }
+> **Source Code**: See [`examples/UefiGuidePkg/NetworkApp/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/NetworkApp) for the complete buildable example.
+
 ## References
 
 - [UEFI Network Stack](https://github.com/tianocore/edk2/tree/master/NetworkPkg)

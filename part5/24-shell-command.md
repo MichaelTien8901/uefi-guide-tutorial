@@ -923,6 +923,11 @@ Boot Configuration:
 4. **Interactive mode**: Add a menu-driven interface
 5. **Network info**: Show network interface configuration
 
+---
+
+{: .note }
+> **Source Code**: See [`examples/UefiGuidePkg/ShellCommand/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/ShellCommand) for the complete buildable example.
+
 ## References
 
 - [EDK2 ShellPkg](https://github.com/tianocore/edk2/tree/master/ShellPkg)

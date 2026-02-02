@@ -980,6 +980,11 @@ qemu-system-x86_64 \
 4. **Boot once**: Add option to boot once without saving
 5. **Edit options**: Allow editing boot parameters
 
+---
+
+{: .note }
+> **Source Code**: See [`examples/UefiGuidePkg/BootMenu/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/BootMenu) for the complete buildable example.
+
 ## References
 
 - [UEFI Graphics Output Protocol](https://uefi.org/specs/UEFI/2.10/12_Protocols_Console_Support.html)

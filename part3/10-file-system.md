@@ -1032,4 +1032,4 @@ typedef struct {
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/FileSystemExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/FileSystemExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/FileSystemExample) for complete examples.

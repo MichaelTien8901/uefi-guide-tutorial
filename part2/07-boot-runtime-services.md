@@ -693,4 +693,4 @@ UefiMain (
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/ServicesExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/ServicesExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/ServicesExample) for complete examples.

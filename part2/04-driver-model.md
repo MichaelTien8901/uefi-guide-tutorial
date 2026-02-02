@@ -610,4 +610,4 @@ MinimalDriverEntryPoint (
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/DriverExample/` for complete driver examples.
+> **Source Code**: See [`examples/UefiGuidePkg/DriverExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/DriverExample) for complete driver examples.

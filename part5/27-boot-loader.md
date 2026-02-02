@@ -992,6 +992,11 @@ Jumping to kernel at 0x0000000000100000...
 4. **Secure Boot**: Verify kernel signature
 5. **Graphics mode**: Set specific video mode before jump
 
+---
+
+{: .note }
+> **Source Code**: See [`examples/UefiGuidePkg/BootLoader/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/BootLoader) for the complete buildable example.
+
 ## References
 
 - [UEFI ExitBootServices](https://uefi.org/specs/UEFI/2.10/07_Services_Boot_Services.html#efi-boot-services-exitbootservices)

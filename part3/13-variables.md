@@ -994,4 +994,4 @@ EFI_STATUS QueryVariableInfo(
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/VariableExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/VariableExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/VariableExample) for complete examples.

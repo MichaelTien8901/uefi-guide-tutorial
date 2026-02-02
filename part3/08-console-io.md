@@ -933,4 +933,4 @@ typedef struct _EFI_SIMPLE_TEXT_INPUT_PROTOCOL {
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/ConsoleExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/ConsoleExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/ConsoleExample) for complete examples.

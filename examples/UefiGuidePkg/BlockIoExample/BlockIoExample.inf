@@ -1,0 +1,36 @@
+## @file
+#  Block I/O Example
+#
+#  Demonstrates UEFI block device access and partition table analysis.
+#
+#  Copyright (c) 2024, UEFI Guide Tutorial. All rights reserved.
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010017
+  BASE_NAME                      = BlockIoExample
+  FILE_GUID                      = 47586970-8B9C-AD0E-0F10-111213140013
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = BlockIoExampleMain
+
+[Sources]
+  BlockIoExample.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  MemoryAllocationLib
+  BaseMemoryLib
+  DevicePathLib
+
+[Protocols]
+  gEfiBlockIoProtocolGuid      ## CONSUMES
+  gEfiBlockIo2ProtocolGuid     ## SOMETIMES_CONSUMES
+  gEfiDiskIoProtocolGuid       ## SOMETIMES_CONSUMES
+  gEfiDevicePathProtocolGuid   ## CONSUMES

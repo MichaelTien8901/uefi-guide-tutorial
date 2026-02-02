@@ -659,4 +659,4 @@ UefiMain (
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/MemoryExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/MemoryExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/MemoryExample) for complete examples.

@@ -960,4 +960,4 @@ typedef struct {
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/GraphicsExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/GopExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/GopExample) for complete examples.

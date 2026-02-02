@@ -548,4 +548,4 @@ You've learned:
 ---
 
 {: .note }
-> **Source Code**: The complete example is in `examples/UefiGuidePkg/HelloWorld/`
+> **Source Code**: The complete example is in [`examples/UefiGuidePkg/HelloWorld/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/HelloWorld)

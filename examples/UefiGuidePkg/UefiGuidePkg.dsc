@@ -78,6 +78,7 @@
   UefiGuidePkg/DriverExample/DriverExample.inf
   UefiGuidePkg/ProtocolExample/ProtocolExample.inf
   UefiGuidePkg/MemoryExample/MemoryExample.inf
+  UefiGuidePkg/ServicesExample/ServicesExample.inf
 
   #
   # Part 3: Essential Services
@@ -85,7 +86,9 @@
   UefiGuidePkg/ConsoleExample/ConsoleExample.inf
   UefiGuidePkg/GopExample/GopExample.inf
   UefiGuidePkg/FileSystemExample/FileSystemExample.inf
+  UefiGuidePkg/BlockIoExample/BlockIoExample.inf
   UefiGuidePkg/NetworkExample/NetworkExample.inf
+  UefiGuidePkg/VariableExample/VariableExample.inf
 
   #
   # Part 5: Practical Projects

@@ -935,4 +935,4 @@ typedef struct _EFI_BLOCK_IO2_PROTOCOL {
 ---
 
 {: .note }
-> **Source Code**: See `examples/UefiGuidePkg/BlockIoExample/` for complete examples.
+> **Source Code**: See [`examples/UefiGuidePkg/BlockIoExample/`](https://github.com/MichaelTien8901/uefi-guide-tutorial/tree/main/examples/UefiGuidePkg/BlockIoExample) for complete examples.
