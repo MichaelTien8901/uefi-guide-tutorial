@@ -15,6 +15,30 @@ Understanding how UEFI drivers manage devices and provide services.
 
 ## Overview
 
+### When to Use the Driver Model
+
+{: .important }
+> **Use the UEFI Driver Model when you need to:**
+> - Manage hardware devices (storage controllers, network cards, graphics adapters)
+> - Provide services that persist throughout boot (remain loaded after entry point returns)
+> - Create reusable device abstractions that work across different platforms
+> - Implement hot-plug support where devices can be connected/disconnected
+
+| Scenario | Use Driver Model? | Reason |
+|:---------|:------------------|:-------|
+| **PCI network card driver** | Yes | Hardware management, stays resident |
+| **USB mass storage driver** | Yes | Device binding, hot-plug support |
+| **One-time diagnostic tool** | No | Use UEFI_APPLICATION instead |
+| **Boot menu application** | No | Runs once and exits |
+| **Platform initialization** | Maybe | Use DXE_DRIVER (no binding) for services |
+| **Runtime variable access** | Yes | Use DXE_RUNTIME_DRIVER |
+
+**Common Driver Development Scenarios:**
+- **OEM/ODM**: Writing drivers for custom hardware on your platform
+- **IHV (Independent Hardware Vendor)**: Creating drivers for add-in cards (GPUs, NICs, RAID controllers)
+- **Platform developers**: Initializing SoC peripherals during DXE phase
+- **Firmware engineers**: Porting existing drivers to new platforms
+
 ### What is a UEFI Driver?
 
 A **UEFI Driver** is code that:

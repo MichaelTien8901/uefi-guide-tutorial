@@ -15,6 +15,48 @@ Reading and writing files using Simple File System Protocol.
 
 ## Overview
 
+### When to Use File System Access
+
+{: .important }
+> **Use File System protocols when you need to:**
+> - Load configuration files, kernels, or initrd images
+> - Read/write log files or persistent data
+> - Enumerate directory contents (boot options discovery)
+> - Access files on the EFI System Partition (ESP)
+
+| Scenario | Protocol | Function |
+|:---------|:---------|:---------|
+| **Load kernel image** | SimpleFileSystem → File | Open, Read, Close |
+| **Write log file** | SimpleFileSystem → File | Create, Write, Close |
+| **List boot options** | SimpleFileSystem → File | Open(dir), Read(entries) |
+| **Check file exists** | SimpleFileSystem → File | Open with read mode |
+| **Get file size** | File → GetInfo | EFI_FILE_INFO |
+| **Delete temp file** | File | Delete |
+
+**File System vs Block I/O:**
+
+| Need | Use File System | Use Block I/O |
+|:-----|:----------------|:--------------|
+| **Read a config file** | Yes | No (too low-level) |
+| **Load kernel from FAT** | Yes | No |
+| **Read raw disk sectors** | No | Yes |
+| **Implement a FS driver** | No | Yes |
+| **Access partition table** | No | Yes |
+| **Portable file access** | Yes | No |
+
+**Typical File System Users:**
+- **Boot loaders**: Load kernel, initrd, config from ESP
+- **Setup utilities**: Save/load configuration files
+- **Shell commands**: File manipulation (cp, ls, cat)
+- **Diagnostic tools**: Write test logs, read test data
+- **Firmware updates**: Read capsule files from filesystem
+
+**Important Considerations:**
+- ESP must be FAT32 (or FAT12/16 for smaller partitions)
+- Always close file handles to prevent resource leaks
+- Check return values - removable media may be ejected
+- Use GetInfo for file size before allocating read buffers
+
 ### File System Architecture
 
 UEFI provides file system access through a layered protocol stack:

@@ -15,6 +15,54 @@ Enhanced Serial Peripheral Interface for EC, flash, and BMC communication.
 
 ## Overview
 
+### When to Use eSPI Interface
+
+{: .important }
+> **Use eSPI when you need to:**
+> - Communicate with Embedded Controller (EC) on modern Intel platforms
+> - Access SPI flash through the chipset
+> - Handle virtual wire interrupts and platform signals
+> - Support TPM, Super I/O, or BMC over eSPI
+
+| Scenario | eSPI Channel | Purpose |
+|:---------|:-------------|:--------|
+| **EC keyboard/battery** | Peripheral | Legacy LPC-like I/O |
+| **Platform signals** | Virtual Wire | Power states, interrupts |
+| **BIOS flash access** | Flash | Read/write firmware |
+| **BMC communication** | OOB | Out-of-band messages |
+| **TPM commands** | Peripheral | TPM 2.0 interface |
+
+**eSPI vs LPC Comparison:**
+
+| Factor | eSPI | LPC |
+|:-------|:-----|:----|
+| **Speed** | Up to 66 MHz | 33 MHz max |
+| **Pins** | Fewer (shared) | More dedicated |
+| **Power** | Lower | Higher |
+| **Modern Intel** | Required | Deprecated |
+| **Channels** | 4 (multiplexed) | Separate buses |
+
+**Who Works with eSPI:**
+
+| Role | eSPI Tasks |
+|:-----|:-----------|
+| **Platform developer** | EC driver, flash access configuration |
+| **EC firmware developer** | eSPI slave implementation |
+| **Silicon vendor** | eSPI controller, Virtual Wire mapping |
+| **Security engineer** | Flash protection, authenticated access |
+
+**eSPI Channels:**
+- **Peripheral**: LPC-compatible I/O and memory cycles
+- **Virtual Wire**: Sideband signals (IRQ, power states)
+- **Flash**: Direct flash read/write (MAFS/SAF modes)
+- **OOB (Out-of-Band)**: SMBus-like tunneled messages
+
+**Platform Considerations:**
+- Intel 100-series and later require eSPI
+- AMD platforms may use LPC or eSPI
+- EC must support eSPI for modern laptops
+- Flash channel mode affects boot security
+
 ### eSPI Architecture
 
 eSPI (Enhanced SPI) replaces LPC for connecting peripherals to the chipset:

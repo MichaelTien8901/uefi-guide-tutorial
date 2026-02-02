@@ -15,6 +15,38 @@ The fundamental building blocks of UEFI's object-oriented architecture.
 
 ## Overview
 
+### When to Use Protocols and Handles
+
+{: .important }
+> **Use Protocols when you need to:**
+> - Expose functionality from a driver to other code (install protocol)
+> - Access hardware or services provided by drivers (consume protocol)
+> - Discover available devices or services in the system
+> - Implement communication between different firmware components
+
+| Scenario | Protocol Action | Common Pattern |
+|:---------|:----------------|:---------------|
+| **Writing a disk driver** | Install BlockIo protocol | Producer - provides block read/write |
+| **Building a boot loader** | Locate SimpleFileSystem | Consumer - reads kernel from disk |
+| **Creating a graphics driver** | Install GOP protocol | Producer - provides framebuffer access |
+| **Displaying boot menu** | Locate GOP protocol | Consumer - draws graphics on screen |
+| **Implementing a network stack** | Install/Consume multiple | Layered protocols (SNP→MNP→IP4→TCP4) |
+| **Finding all USB devices** | LocateHandleBuffer(ByProtocol) | Enumerate all UsbIo handles |
+
+**When to Install vs. Consume Protocols:**
+
+| Role | Action | Typical MODULE_TYPE |
+|:-----|:-------|:--------------------|
+| **Driver developer** | Install protocols on device handles | UEFI_DRIVER, DXE_DRIVER |
+| **Application developer** | Locate and use existing protocols | UEFI_APPLICATION |
+| **Platform developer** | Both - install platform services, consume hardware | DXE_DRIVER |
+
+**Key Protocol Usage Patterns:**
+- **LocateProtocol**: Find first (or only) instance of a service (e.g., RNG, Security)
+- **LocateHandleBuffer**: Find all instances (e.g., all block devices, all network interfaces)
+- **OpenProtocol**: Exclusive access with proper resource tracking (drivers)
+- **HandleProtocol**: Quick read-only access (applications)
+
 ### What are Protocols?
 
 A **Protocol** in UEFI is a named interface - a structure containing function pointers and data that provides specific functionality. Protocols are identified by GUIDs and installed on handles.

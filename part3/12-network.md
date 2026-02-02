@@ -15,6 +15,47 @@ Network programming using UEFI network protocols.
 
 ## Overview
 
+### When to Use Network Protocols
+
+{: .important }
+> **Use Network protocols when you need to:**
+> - Boot from network (PXE boot, HTTP boot)
+> - Download files or updates over network
+> - Implement network diagnostics (ping, connectivity tests)
+> - Access remote management services (Redfish)
+
+| Scenario | Protocol(s) | Example |
+|:---------|:------------|:--------|
+| **PXE network boot** | DHCP4 + MTFTP | Download NBP from TFTP server |
+| **HTTP boot** | DHCP4 + DNS4 + HTTP | Boot kernel via HTTP URL |
+| **Download firmware update** | TCP4 or HTTP | Fetch capsule from server |
+| **Network diagnostic** | IP4 + ICMP | Ping test implementation |
+| **REST API access** | HTTP + TLS | Redfish BMC communication |
+| **Custom network app** | TCP4 or UDP4 | Client/server applications |
+
+**Choosing the Right Protocol Layer:**
+
+| Need | Protocol | Complexity |
+|:-----|:---------|:-----------|
+| **Web/REST requests** | HTTP | Easiest - handles HTTP semantics |
+| **Reliable data transfer** | TCP4/TCP6 | Medium - connection-oriented |
+| **Low-latency, no guarantee** | UDP4/UDP6 | Medium - connectionless |
+| **Custom protocol over IP** | IP4/IP6 raw | Complex - build your own |
+| **Direct frame access** | SNP/MNP | Complex - NIC driver level |
+
+**Typical Network Users:**
+- **PXE/HTTP boot implementations**: Network boot infrastructure
+- **Firmware update tools**: Download updates from corporate servers
+- **Remote management**: Redfish-based configuration from BMC
+- **Diagnostic utilities**: Network connectivity testing
+- **Diskless workstations**: Boot entirely from network
+
+**Important Considerations:**
+- Network drivers may not be present on all systems
+- DHCP configuration required before most operations
+- Service binding model - create child handles for connections
+- Timeouts and error handling critical for reliability
+
 ### Network Protocol Stack
 
 UEFI provides a complete network stack from hardware to application layer:

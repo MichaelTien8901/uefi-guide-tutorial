@@ -15,6 +15,48 @@ Driver Execution Environment - full system initialization and driver loading.
 
 ## Overview
 
+### When to Work with DXE Phase
+
+{: .important }
+> **Work with DXE phase when you need to:**
+> - Write device drivers (storage, network, graphics)
+> - Implement platform services (console, variables)
+> - Add custom firmware functionality (diagnostics, setup)
+> - Most UEFI development happens in DXE phase
+
+| Scenario | DXE Component | Example |
+|:---------|:--------------|:--------|
+| **Storage device support** | DXE_DRIVER | AHCI, NVMe, USB mass storage |
+| **Network boot** | DXE_DRIVER | Network stack, PXE |
+| **Graphics display** | DXE_DRIVER | GOP driver for GPU |
+| **Boot manager** | UEFI_APPLICATION | Boot option selection |
+| **Platform setup** | DXE_DRIVER | HII-based setup utility |
+| **Runtime variable access** | DXE_RUNTIME_DRIVER | Variable storage driver |
+
+**DXE vs Other Phases:**
+
+| Factor | PEI | DXE | BDS |
+|:-------|:----|:----|:----|
+| **Memory** | Limited (CAR) | Full DRAM | Full DRAM |
+| **Drivers** | PEIMs | Full drivers | Apps only |
+| **Protocols** | PPIs | Full protocol database | Consume protocols |
+| **Typical use** | HW init | Everything | Boot selection |
+
+**Who Works with DXE:**
+
+| Role | DXE Involvement | Typical Tasks |
+|:-----|:----------------|:--------------|
+| **Driver developer** | Heavy | Device drivers, protocol implementation |
+| **Platform developer** | Heavy | Platform-specific drivers, configuration |
+| **Application developer** | Moderate | UEFI applications run after DXE |
+| **Silicon vendor** | Moderate | Reference drivers, validation |
+
+**Key DXE Concepts:**
+- **Dispatcher**: Loads drivers based on dependencies (DEPEX)
+- **Architectural Protocols**: Required protocols for OS boot
+- **Driver Binding**: Hot-plug capable device management
+- **Event/Timer**: Asynchronous operations support
+
 ### DXE in the Boot Flow
 
 DXE (Driver Execution Environment) is where most firmware functionality is implemented:

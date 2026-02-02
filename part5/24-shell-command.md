@@ -12,6 +12,39 @@ Build a fully-featured UEFI Shell command with argument parsing, help text, and 
 
 ## Overview
 
+### When to Build Custom Shell Commands
+
+{: .important }
+> **Build custom shell commands when you need to:**
+> - Create diagnostic or debugging tools for firmware
+> - Automate testing workflows in UEFI Shell
+> - Provide administrators with platform-specific utilities
+> - Prototype features before full driver implementation
+
+| Use Case | Example Command | Purpose |
+|:---------|:----------------|:--------|
+| **System diagnostics** | `sysinfo`, `memtest` | Display/test hardware |
+| **Manufacturing** | `hwcheck`, `sn-program` | Production line tools |
+| **Debug utilities** | `dump`, `memdiff` | Developer debugging |
+| **Configuration** | `nvconfig`, `bootctl` | Modify settings |
+| **Validation** | `pcitest`, `usbtest` | Hardware validation |
+
+**Shell Command vs UEFI Application:**
+
+| Factor | Shell Command | Standalone App |
+|:-------|:--------------|:---------------|
+| **Execution** | From UEFI Shell | Direct boot or Shell |
+| **Arguments** | Shell parses | Self-parsing |
+| **Output** | Shell stdio | ConOut protocol |
+| **Dependencies** | ShellPkg libraries | Minimal |
+| **Best for** | Utilities, scripts | Boot managers, loaders |
+
+**Who Builds Shell Commands:**
+- **BIOS engineers**: Debug and manufacturing tools
+- **Validation teams**: Hardware test utilities
+- **Platform developers**: Configuration utilities
+- **Support engineers**: Diagnostic tools for field issues
+
 ### What We're Building
 
 A system information utility (`sysinfo`) that displays:

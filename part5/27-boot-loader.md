@@ -12,6 +12,46 @@ Build a boot loader that loads and executes a kernel, demonstrating the complete
 
 ## Overview
 
+### When to Build a Custom Boot Loader
+
+{: .important }
+> **Build a custom boot loader when you need to:**
+> - Boot a custom OS or kernel with specific requirements
+> - Implement specialized boot logic not available in existing loaders
+> - Learn the complete UEFI to OS handoff process
+> - Support custom kernel formats or protocols
+
+| Use Case | Boot Loader Type | Example |
+|:---------|:-----------------|:--------|
+| **Custom OS** | Full loader | Hobby OS, embedded Linux |
+| **Secure boot chain** | Verified loader | Custom signature verification |
+| **Multi-kernel** | Selector + loader | Choose kernel version |
+| **Recovery** | Fallback loader | Boot recovery environment |
+| **Testing** | Minimal loader | Kernel development |
+
+**Custom Boot Loader vs Existing Solutions:**
+
+| Factor | Custom | GRUB/systemd-boot |
+|:-------|:-------|:------------------|
+| **Flexibility** | Full control | Configuration-based |
+| **Maintenance** | Your code | Community maintained |
+| **Features** | What you need | Full-featured |
+| **Learning** | Deep understanding | Use existing |
+| **Best for** | Custom OS | Standard distros |
+
+**Who Builds Custom Boot Loaders:**
+- **OS developers**: Custom kernel boot requirements
+- **Embedded developers**: Specialized boot flows
+- **Security products**: Secure boot with custom verification
+- **Students/hobbyists**: Learning OS development
+
+**Critical Boot Loader Responsibilities:**
+- Load kernel to correct memory address
+- Pass memory map (GetMemoryMap)
+- Provide framebuffer info (from GOP)
+- Call ExitBootServices correctly (retry on map change)
+- Jump to kernel with proper ABI
+
 ### What We're Building
 
 A boot loader (`myloader`) that:

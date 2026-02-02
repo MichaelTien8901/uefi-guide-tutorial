@@ -15,6 +15,50 @@ System Management Mode - isolated execution environment for firmware services.
 
 ## Overview
 
+### When to Use SMM
+
+{: .important }
+> **Use SMM when you need to:**
+> - Handle hardware events invisible to the OS (power button, thermal events)
+> - Provide secure firmware services that OS cannot tamper with
+> - Implement legacy hardware emulation (PS/2 keyboard, floppy)
+> - Protect security-critical code from OS-level attacks
+
+| Scenario | SMI Handler | Example |
+|:---------|:------------|:--------|
+| **Power button handling** | Power SMI | Graceful shutdown sequence |
+| **Thermal management** | Thermal SMI | CPU throttling, fan control |
+| **Variable write protection** | SW SMI | Secure variable storage |
+| **Legacy USB keyboard** | USB SMI | PS/2 emulation for BIOS |
+| **Hardware error handling** | MCA SMI | Log and recover from errors |
+| **BIOS flash protection** | Write SMI | Prevent unauthorized flashing |
+
+**SMM vs DXE Runtime Decision:**
+
+| Factor | Use SMM | Use Runtime Driver |
+|:-------|:--------|:-------------------|
+| **OS visibility** | Hidden | Visible |
+| **Security level** | Ring -2 (highest) | Ring 0 (kernel level) |
+| **Performance** | Interrupt overhead | Direct call |
+| **Complexity** | Complex (isolation) | Simpler |
+| **Use when** | Security critical | Performance critical |
+
+**Who Works with SMM:**
+
+| Role | SMM Involvement | Typical Tasks |
+|:-----|:----------------|:--------------|
+| **Security engineer** | Heavy | Variable protection, flash protection |
+| **Platform developer** | Moderate | Power management, error handling |
+| **BIOS engineer** | Moderate | SMI handler integration |
+| **Driver developer** | Rare | Only for SMM-resident services |
+| **Application developer** | None | SMM invisible to applications |
+
+**SMM Security Considerations:**
+- SMRAM must be locked before OS boot
+- Validate all inputs from untrusted sources (OS, peripherals)
+- Minimize SMM attack surface
+- SMM vulnerabilities are severe (Ring -2 compromise)
+
 ### SMM Architecture
 
 SMM provides a hidden, isolated execution environment separate from the OS:

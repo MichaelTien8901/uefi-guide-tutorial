@@ -15,6 +15,49 @@ IPMI, Redfish, and BMC-UEFI communication for server platforms.
 
 ## Overview
 
+### When to Use BMC Integration
+
+{: .important }
+> **Use BMC Integration when you need to:**
+> - Report boot progress (POST codes) to remote management
+> - Enable Serial-over-LAN for remote console access
+> - Log sensor data and hardware events during boot
+> - Support Redfish-based configuration from management software
+
+| Scenario | Protocol | UEFI Component |
+|:---------|:---------|:---------------|
+| **POST code reporting** | IPMI (KCS/BT) | Status Code driver |
+| **Remote console** | IPMI SOL | Serial redirection |
+| **Sensor reading** | IPMI | Sensor driver |
+| **REST-based management** | Redfish | REST_EX protocol |
+| **Firmware update via BMC** | Redfish | UpdateService |
+| **Boot option from BMC** | Redfish | BootOptionRegistry |
+
+**BMC Protocol Comparison:**
+
+| Factor | IPMI | Redfish |
+|:-------|:-----|:--------|
+| **Interface** | Low-level binary | RESTful JSON |
+| **Complexity** | Simpler | More complex |
+| **Extensibility** | OEM commands | Standard schemas |
+| **Security** | Limited | TLS, authentication |
+| **Modern systems** | Legacy | Preferred |
+
+**Who Implements BMC Integration:**
+
+| Role | BMC Tasks |
+|:-----|:----------|
+| **Platform developer** | IPMI driver, interface selection |
+| **Server OEM** | BMC firmware, UEFI integration |
+| **Data center operator** | Redfish clients, automation |
+| **Firmware engineer** | POST codes, SOL, health monitoring |
+
+**Platform Considerations:**
+- Server platforms: Full BMC integration expected
+- Client platforms: Usually no BMC (use EC instead)
+- Embedded: May have lightweight management controller
+- IPMI interface (KCS, BT, SSIF) determined by hardware
+
 ### BMC Architecture
 
 The Baseboard Management Controller (BMC) provides out-of-band management:

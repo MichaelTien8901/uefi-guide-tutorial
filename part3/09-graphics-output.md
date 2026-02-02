@@ -15,6 +15,42 @@ Working with the Graphics Output Protocol (GOP) for graphical displays.
 
 ## Overview
 
+### When to Use Graphics Output
+
+{: .important }
+> **Use GOP when you need to:**
+> - Display graphical boot splash screens or logos
+> - Create graphical user interfaces (boot menus with icons)
+> - Draw progress bars, images, or complex visual elements
+> - Access the raw framebuffer for custom rendering
+
+| Scenario | GOP Feature | Example |
+|:---------|:------------|:--------|
+| **Boot splash screen** | Blt (BltBufferToVideo) | Display OEM logo |
+| **Graphical boot menu** | Framebuffer + Blt | rEFInd, systemd-boot |
+| **Progress indicator** | Blt (EfiBltVideoFill) | Draw colored rectangles |
+| **Screenshot capture** | Blt (BltVideoToBltBuffer) | Save screen to file |
+| **Video mode selection** | QueryMode/SetMode | Match display resolution |
+| **Pass framebuffer to OS** | Mode->FrameBufferBase | Kernel early console |
+
+**GOP vs Console I/O Decision:**
+
+| Need | Use GOP | Use Console |
+|:-----|:--------|:------------|
+| **Simple text messages** | No | Yes |
+| **Color text menus** | Either | Simpler |
+| **Images or logos** | Yes | No |
+| **Pixel-level control** | Yes | No |
+| **Headless systems** | N/A | Yes |
+| **Fast text output** | No | Yes |
+
+**Typical GOP Users:**
+- **OEM/ODM firmware**: Custom boot splash with company logo
+- **Boot managers**: Graphical boot selection (rEFInd, Clover)
+- **Diagnostic tools**: Visual memory maps, progress bars
+- **Secure boot UI**: Graphical key enrollment interfaces
+- **OS loaders**: Early framebuffer console before full driver
+
 ### Graphics Architecture
 
 UEFI provides hardware-independent graphics through GOP:

@@ -15,6 +15,47 @@ Low-level storage device access using Block I/O Protocol.
 
 ## Overview
 
+### When to Use Block I/O
+
+{: .important }
+> **Use Block I/O when you need to:**
+> - Implement a file system driver (consume BlockIo to provide SimpleFileSystem)
+> - Access raw disk sectors (MBR, GPT, partition data)
+> - Write a storage device driver (provide BlockIo for your device)
+> - Perform low-level disk operations (secure erase, partition creation)
+
+| Scenario | Protocol | Example |
+|:---------|:---------|:--------|
+| **Write FAT driver** | Consume BlockIo | Read sectors, parse FAT |
+| **Read GPT partition table** | BlockIo.ReadBlocks | LBA 1 for GPT header |
+| **Write NVMe driver** | Produce BlockIo | Expose NVMe as block device |
+| **Disk cloning tool** | BlockIo Read/Write | Sector-by-sector copy |
+| **Partition manager** | BlockIo + DiskIo | Modify partition table |
+| **Async large transfers** | BlockIo2 | Non-blocking bulk I/O |
+
+**Block I/O vs Higher-Level Protocols:**
+
+| Task | Block I/O | Disk I/O | File System |
+|:-----|:----------|:---------|:------------|
+| **Read file content** | No | No | Yes |
+| **Read specific sector** | Yes | Yes | No |
+| **Byte-aligned access** | No | Yes | Yes |
+| **Implement FS driver** | Yes | Maybe | No |
+| **User-facing tools** | Rarely | Rarely | Usually |
+
+**Typical Block I/O Users:**
+- **Storage driver developers**: AHCI, NVMe, USB mass storage drivers
+- **File system developers**: FAT, NTFS, ext4 driver implementations
+- **Partitioning tools**: GPT/MBR manipulation utilities
+- **Disk utilities**: Wiping, cloning, benchmarking tools
+- **Boot loaders**: Sometimes read kernel directly from known sectors
+
+**Key Concepts:**
+- **MediaId**: Changes when media is swapped (removable devices)
+- **LogicalBlocksPerPhysicalBlock**: Important for 4K-native drives
+- **ReadOnly**: Check before attempting writes
+- **BlockSize**: Usually 512 or 4096 bytes
+
 ### Storage Architecture
 
 Block I/O provides the foundation for storage access in UEFI:

@@ -15,6 +15,44 @@ Understanding the two service tables and the critical ExitBootServices transitio
 
 ## Overview
 
+### When to Use Boot vs Runtime Services
+
+{: .important }
+> **Use Boot Services when you need to:**
+> - Allocate memory, load images, manage protocols (most firmware operations)
+> - Access hardware during boot phase
+> - Perform any operation that won't be needed after OS takes control
+>
+> **Use Runtime Services when you need to:**
+> - Access UEFI variables from the OS (GetVariable, SetVariable)
+> - Get/set system time from the OS
+> - Trigger system reset or capsule update from the OS
+
+| Operation | Service Type | Why |
+|:----------|:-------------|:----|
+| **Install a driver** | Boot Services | Protocol database gone after EBS |
+| **Read BootOrder variable** | Either | Boot or Runtime both work |
+| **Write a variable from OS** | Runtime Services | Only runtime available after EBS |
+| **Allocate memory** | Boot Services | Use before ExitBootServices |
+| **Reset system from OS** | Runtime Services | ResetSystem() works anytime |
+| **Load UEFI shell** | Boot Services | LoadImage/StartImage |
+
+**Who Uses What:**
+
+| Role | Primary Services | Typical Operations |
+|:-----|:-----------------|:-------------------|
+| **UEFI Application** | Boot Services | Everything during boot |
+| **DXE Driver** | Boot Services | Protocol installation, memory |
+| **Runtime Driver** | Both → Runtime only | Variable access from OS |
+| **Boot Loader** | Boot → GetMemoryMap → Exit | Memory map, ExitBootServices |
+| **OS Kernel** | Runtime Services | Variables, time, reset |
+
+**Critical ExitBootServices Transition:**
+- Boot Services terminate permanently - no more protocol access
+- Memory map becomes final - OS takes memory ownership
+- Runtime drivers convert to virtual addresses if OS requests
+- Only Runtime Services remain callable
+
 ### Two Service Tables
 
 UEFI provides two distinct sets of services:

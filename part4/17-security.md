@@ -15,6 +15,54 @@ Secure Boot, TPM integration, and measured boot.
 
 ## Overview
 
+### When to Use UEFI Security Features
+
+{: .important }
+> **Use Secure Boot when you need to:**
+> - Ensure only authorized code runs during boot
+> - Protect against bootkits and rootkits
+> - Meet enterprise or regulatory security requirements
+>
+> **Use Measured Boot/TPM when you need to:**
+> - Create a chain of trust for remote attestation
+> - Seal secrets to platform configuration
+> - Detect unauthorized boot modifications
+
+| Scenario | Security Feature | Implementation |
+|:---------|:-----------------|:---------------|
+| **Block unsigned bootloaders** | Secure Boot | db/dbx signature check |
+| **Enterprise compliance** | Secure Boot + TPM | Full measured boot chain |
+| **Disk encryption** | TPM sealing | BitLocker, LUKS with TPM |
+| **Remote attestation** | TPM PCRs + Quote | Verify platform integrity |
+| **Revoke compromised driver** | dbx update | Add hash to forbidden list |
+| **Allow custom OS** | Key enrollment | Add key to db |
+
+**Security Feature Selection:**
+
+| Requirement | Secure Boot | Measured Boot | Both |
+|:------------|:------------|:--------------|:-----|
+| **Block malware** | Yes | No (detect only) | Best |
+| **Audit boot components** | No | Yes | Yes |
+| **Self-healing** | No | No | No |
+| **Enterprise compliance** | Partial | Partial | Full |
+| **Custom OS support** | Key enrollment needed | Transparent | Key enrollment needed |
+
+**Who Implements Security Features:**
+
+| Role | Security Tasks |
+|:-----|:---------------|
+| **Platform vendor** | Enable Secure Boot, enroll PK, implement TPM driver |
+| **OS vendor** | Sign bootloader, provide KEK, support measured boot |
+| **Enterprise IT** | Configure policies, manage dbx updates, attestation |
+| **End user** | Enroll custom keys, enable/disable Secure Boot |
+| **Security researcher** | Vulnerability analysis, bypass research |
+
+**Common Security Scenarios:**
+- **Dual-boot Linux**: Enroll Linux distribution key in db
+- **Custom kernel**: Sign with enrolled key or disable Secure Boot
+- **Enterprise lockdown**: Enforce Secure Boot, remote attestation
+- **Development system**: Disable Secure Boot or use custom keys
+
 ### UEFI Security Architecture
 
 ```mermaid

@@ -15,6 +15,47 @@ Pre-EFI Initialization - memory initialization and early platform setup.
 
 ## Overview
 
+### When to Work with PEI Phase
+
+{: .important }
+> **Work with PEI phase when you need to:**
+> - Initialize memory controllers (DRAM training, SPD detection)
+> - Perform early platform initialization before main memory is available
+> - Configure CPU and chipset for DXE phase
+> - Pass hardware discovery data to later boot phases via HOBs
+
+| Scenario | PEI Component | Example |
+|:---------|:--------------|:--------|
+| **Memory controller init** | MRC PEIM | Intel FSP MemoryInit |
+| **Early CPU setup** | CPU PEIM | Microcode loading, cache config |
+| **Chipset configuration** | Chipset PEIM | PCH/SoC initialization |
+| **Recovery mode** | Recovery PEIM | Load recovery firmware |
+| **S3 resume** | S3 PEIMs | Restore saved state quickly |
+| **Pass info to DXE** | HOB producer | Memory map, CPU info HOBs |
+
+**Who Works with PEI:**
+
+| Role | PEI Involvement | Typical Tasks |
+|:-----|:----------------|:--------------|
+| **Silicon vendor** | Heavy | Memory training, FSP development |
+| **Platform developer** | Moderate | Platform PEIMs, PCD configuration |
+| **BIOS engineer** | Moderate | Integration, debug, customization |
+| **Application developer** | None | PEI complete before apps run |
+| **Driver developer** | Rare | Only for early hardware init |
+
+**Key PEI Constraints:**
+- Very limited stack space (use sparingly)
+- No permanent memory until MRC completes
+- CAR (Cache-as-RAM) for initial execution
+- Simple API (PPIs, not full protocols)
+- Must be fast (affects boot time)
+
+**Common PEI Mistakes to Avoid:**
+- Large stack allocations (limited CAR space)
+- Assuming memory is available early
+- Complex algorithms before memory init
+- Missing HOBs that DXE needs
+
 ### PEI in the Boot Flow
 
 PEI (Pre-EFI Initialization) runs immediately after SEC with minimal resources:

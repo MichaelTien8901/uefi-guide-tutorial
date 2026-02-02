@@ -15,6 +15,40 @@ Understanding UEFI memory allocation, types, and the memory map.
 
 ## Overview
 
+### When to Use Memory Services
+
+{: .important }
+> **Use Memory Services when you need to:**
+> - Allocate temporary buffers for data processing
+> - Create persistent data structures for drivers
+> - Get the system memory map before booting an OS
+> - Allocate memory with specific type requirements (runtime, reserved)
+
+| Scenario | Memory Function | Memory Type |
+|:---------|:----------------|:------------|
+| **Small buffer (<4KB)** | AllocatePool | EfiBootServicesData |
+| **Large buffer or aligned memory** | AllocatePages | EfiBootServicesData |
+| **Buffer for runtime use** | AllocatePages | EfiRuntimeServicesData |
+| **DMA buffer for device** | AllocatePages | EfiBootServicesData (or device-specific) |
+| **OS handoff preparation** | GetMemoryMap | N/A (read-only) |
+| **ACPI table allocation** | AllocatePages | EfiACPIMemoryNVS |
+
+**Choosing Pool vs Pages:**
+
+| Factor | Use Pool | Use Pages |
+|:-------|:---------|:----------|
+| **Size** | < 4KB | >= 4KB or alignment needed |
+| **Alignment** | No guarantee | 4KB aligned |
+| **Fragmentation** | Possible | Less fragmented |
+| **Runtime drivers** | Never | Required for runtime memory |
+| **Performance** | Faster for small allocs | Better for large allocs |
+
+**Common Memory Usage Patterns:**
+- **Application developers**: Pool allocation for temporary buffers, GetMemoryMap before ExitBootServices
+- **Driver developers**: Pages for device contexts, runtime memory for persistent state
+- **Boot loader developers**: GetMemoryMap to pass memory info to OS kernel
+- **Platform developers**: Reserved memory for firmware features, ACPI NVS for sleep states
+
 ### Memory in UEFI
 
 UEFI provides comprehensive memory management through Boot Services. Understanding memory is critical because:

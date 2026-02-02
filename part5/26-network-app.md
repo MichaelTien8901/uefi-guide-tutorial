@@ -12,6 +12,39 @@ Build an HTTP client and network diagnostic tool that demonstrates UEFI's networ
 
 ## Overview
 
+### When to Build Network Applications
+
+{: .important }
+> **Build network applications when you need to:**
+> - Download firmware updates or boot files from a server
+> - Implement network-based diagnostics or monitoring
+> - Support PXE-like boot scenarios with custom logic
+> - Communicate with management services (Redfish clients)
+
+| Use Case | Network Feature | Example |
+|:---------|:----------------|:--------|
+| **HTTP boot** | HTTP protocol | Download kernel from web server |
+| **Update download** | TCP/HTTP | Fetch firmware capsules |
+| **Network diagnostics** | ICMP/ARP | Ping, connectivity testing |
+| **Configuration** | DHCP/DNS | Retrieve network settings |
+| **Management** | REST/HTTP | Redfish API access |
+| **PXE alternative** | TFTP/HTTP | Custom network boot |
+
+**Network Application Complexity:**
+
+| Level | Protocols | Effort |
+|:------|:----------|:-------|
+| **Basic** | DHCP, DNS, Ping | Low |
+| **Moderate** | TCP/UDP client | Medium |
+| **Advanced** | HTTP with TLS | High |
+| **Expert** | Custom protocols | Very high |
+
+**Who Builds Network Applications:**
+- **PXE/boot developers**: Network boot infrastructure
+- **Enterprise IT tools**: Remote configuration utilities
+- **Update services**: OTA firmware update clients
+- **Diagnostic developers**: Network troubleshooting tools
+
 ### What We're Building
 
 A network utility (`netutil`) that provides:

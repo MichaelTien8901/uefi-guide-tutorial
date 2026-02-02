@@ -15,6 +15,49 @@ Reliability, Availability, and Serviceability - WHEA, APEI, and error handling.
 
 ## Overview
 
+### When to Use RAS Features
+
+{: .important }
+> **Use RAS features when you need to:**
+> - Handle hardware errors (CPU, memory, PCIe) gracefully
+> - Log errors for post-mortem analysis and reporting
+> - Support error injection for validation testing
+> - Meet enterprise/server reliability requirements
+
+| Scenario | APEI Table | Purpose |
+|:---------|:-----------|:--------|
+| **Error source enumeration** | HEST | Define CPU, memory, PCIe error sources |
+| **Boot error recording** | BERT | Report errors from previous boot |
+| **Persistent error storage** | ERST | Non-volatile error log |
+| **Error injection testing** | EINJ | Trigger synthetic errors |
+| **Error severity handling** | HEST | Correctable vs fatal classification |
+
+**RAS Feature Selection:**
+
+| Platform Type | RAS Level | Features |
+|:--------------|:----------|:---------|
+| **Client** | Minimal | Basic MCA, no APEI |
+| **Workstation** | Moderate | MCA, ECC reporting |
+| **Server** | Full | Complete APEI, WHEA, hot-plug |
+| **Mission-critical** | Maximum | Redundancy, live migration |
+
+**Who Implements RAS:**
+
+| Role | RAS Tasks |
+|:-----|:----------|
+| **Silicon vendor** | MCA, AER, error detection logic |
+| **Platform developer** | APEI tables, error handlers |
+| **BIOS engineer** | Error handling integration |
+| **OS vendor** | WHEA consumer, error reporting |
+| **Reliability engineer** | EINJ testing, validation |
+
+**Key RAS Concepts:**
+- **WHEA**: Windows Hardware Error Architecture
+- **MCA/MCE**: Machine Check Architecture/Exception
+- **AER**: Advanced Error Reporting (PCIe)
+- **ECC**: Error Correcting Code (memory)
+- **Correctable vs Uncorrectable**: Severity determines handling
+
 ### RAS Architecture
 
 RAS features ensure system reliability through error detection, logging, and recovery:

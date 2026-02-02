@@ -12,6 +12,39 @@ Build a visual boot option selector with keyboard navigation, timeout countdown,
 
 ## Overview
 
+### When to Build a Custom Boot Menu
+
+{: .important }
+> **Build a custom boot menu when you need to:**
+> - Create a branded boot experience for your platform
+> - Add features not available in standard BDS
+> - Implement custom boot selection logic
+> - Support specialized hardware or use cases
+
+| Use Case | Boot Menu Type | Features |
+|:---------|:---------------|:---------|
+| **OEM branding** | Graphical | Custom colors, logos, themes |
+| **Multi-boot** | Selection menu | OS choice with timeout |
+| **Kiosk/embedded** | Minimal | Single option, no UI |
+| **Recovery** | Special purpose | Boot to recovery partition |
+| **Security** | Authenticated | Password or key required |
+
+**Custom Boot Menu vs Standard BDS:**
+
+| Factor | Custom Menu | Standard BDS |
+|:-------|:------------|:-------------|
+| **Appearance** | Full control | Platform default |
+| **Logic** | Custom rules | BootOrder only |
+| **Maintenance** | Your code | Vendor updates |
+| **Compatibility** | Test required | Tested by vendor |
+| **Best for** | OEM/specialized | General use |
+
+**Who Builds Custom Boot Menus:**
+- **OEM developers**: Branded boot experience
+- **Embedded developers**: Specialized boot flows
+- **Boot loader developers**: Multi-OS support (GRUB, rEFInd)
+- **Security products**: Pre-boot authentication
+
 ### What We're Building
 
 A graphical boot menu that:

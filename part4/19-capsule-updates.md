@@ -15,6 +15,47 @@ Firmware update mechanisms using UEFI Capsule.
 
 ## Overview
 
+### When to Use Capsule Updates
+
+{: .important }
+> **Use Capsule Updates when you need to:**
+> - Deliver firmware updates from the operating system
+> - Update BIOS/UEFI firmware in a standard, OS-agnostic way
+> - Support Windows Update for firmware (WSUS/WU)
+> - Implement secure, authenticated firmware updates
+
+| Scenario | Capsule Method | Delivery |
+|:---------|:---------------|:---------|
+| **Windows Update** | UpdateCapsule() | Memory-based, WU integration |
+| **Linux fwupd** | UpdateCapsule() or ESP | LVFS integration |
+| **Standalone update** | ESP capsule file | User copies to EFI partition |
+| **Recovery update** | ESP or flash tool | Failsafe fallback |
+| **Device firmware** | FMP capsule | Update peripherals (Thunderbolt, etc.) |
+
+**Capsule vs Other Update Methods:**
+
+| Factor | UEFI Capsule | Flash Tool | BMC-based |
+|:-------|:-------------|:-----------|:----------|
+| **OS integration** | Excellent | Poor | Excellent |
+| **Standardization** | UEFI spec | Vendor-specific | IPMI/Redfish |
+| **Security** | Signed capsules | Varies | Varies |
+| **User experience** | Seamless reboot | Boot to DOS/shell | Remote |
+
+**Who Implements Capsule Updates:**
+
+| Role | Capsule Tasks |
+|:-----|:--------------|
+| **Firmware developer** | Implement capsule processing, FMP driver |
+| **Platform developer** | ESRT configuration, flash layout |
+| **OS vendor** | UpdateCapsule caller, fwupd/WU |
+| **IT administrator** | Deploy updates via management tools |
+
+**Key Capsule Concepts:**
+- **FMP (Firmware Management Protocol)**: Interface for updates
+- **ESRT (EFI System Resource Table)**: Describes updateable components
+- **Signed capsules**: Authentication prevents malicious updates
+- **Scatter-gather**: Handle large updates in fragments
+
 ### Capsule Update Architecture
 
 ```mermaid

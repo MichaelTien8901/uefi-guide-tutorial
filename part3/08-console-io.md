@@ -15,6 +15,41 @@ Text input and output using Simple Text protocols.
 
 ## Overview
 
+### When to Use Console I/O
+
+{: .important }
+> **Use Console I/O when you need to:**
+> - Display text messages, menus, or prompts to the user
+> - Read keyboard input for user interaction
+> - Create text-based user interfaces (setup utilities, boot menus)
+> - Output debug or status information during boot
+
+| Scenario | Protocol | Function |
+|:---------|:---------|:---------|
+| **Display status messages** | SimpleTextOut | OutputString, Print |
+| **Wait for keypress** | SimpleTextIn | WaitForKey + ReadKeyStroke |
+| **Detect modifier keys (Ctrl, Alt)** | SimpleTextInputEx | ReadKeyStrokeEx |
+| **Register hotkeys** | SimpleTextInputEx | RegisterKeyNotify |
+| **Create colored menus** | SimpleTextOut | SetAttribute |
+| **Position cursor for UI** | SimpleTextOut | SetCursorPosition |
+
+**Console I/O vs Graphics Output:**
+
+| Factor | Console I/O | Graphics Output (GOP) |
+|:-------|:------------|:---------------------|
+| **Content type** | Text only | Pixels/graphics |
+| **Complexity** | Simple | Complex |
+| **Font control** | None | Full control |
+| **Use case** | Diagnostics, menus | Boot splash, graphical UI |
+| **Availability** | Almost always | May not exist (servers) |
+
+**Typical Console Users:**
+- **Setup utilities**: BIOS/UEFI configuration menus
+- **Boot managers**: Text-based boot selection (GRUB menu)
+- **Diagnostic tools**: Memory test, hardware info display
+- **Shell applications**: Interactive command-line tools
+- **Debug output**: Development and troubleshooting messages
+
 ### Console Architecture
 
 UEFI provides a unified console abstraction that works across different hardware:

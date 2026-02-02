@@ -15,6 +15,49 @@ Advanced Configuration and Power Interface tables in UEFI.
 
 ## Overview
 
+### When to Work with ACPI
+
+{: .important }
+> **Work with ACPI when you need to:**
+> - Describe platform hardware to the operating system
+> - Implement power management (sleep states, CPU power states)
+> - Configure interrupt routing and device resources
+> - Support hot-plug devices or dynamic platform configuration
+
+| Scenario | ACPI Table | Purpose |
+|:---------|:-----------|:--------|
+| **CPU/interrupt topology** | MADT | Describe CPUs, IOAPICs, GICs |
+| **PCIe configuration** | MCFG | ECAM base address for PCIe |
+| **Device enumeration** | DSDT/SSDT | Non-discoverable devices |
+| **Power management** | FADT, _PSS, _CST | Sleep states, P-states, C-states |
+| **Memory-mapped devices** | DSDT (Device nodes) | GPIO, I2C, SPI controllers |
+| **Hot-plug support** | DSDT (_EJ0, _OST) | Device ejection methods |
+
+**ACPI vs Device Tree (ARM):**
+
+| Factor | ACPI | Device Tree |
+|:-------|:-----|:------------|
+| **Platform** | x86, ARM servers | ARM embedded, Linux |
+| **Complexity** | Higher | Lower |
+| **Power management** | Full support | Limited |
+| **OS support** | Windows, Linux | Primarily Linux |
+| **Standardization** | UEFI Forum spec | Less formal |
+
+**Who Works with ACPI:**
+
+| Role | ACPI Tasks |
+|:-----|:-----------|
+| **Platform developer** | Generate tables, define devices, power states |
+| **Silicon vendor** | Reference DSDT, chipset-specific tables |
+| **BIOS engineer** | Table customization, ASL debugging |
+| **OS developer** | Consume tables, debug ACPI issues |
+
+**Key ACPI Concepts:**
+- **ASL (ACPI Source Language)**: High-level language for DSDT/SSDT
+- **AML (ACPI Machine Language)**: Compiled bytecode in tables
+- **Control Methods**: Executable code for dynamic behavior
+- **Namespace**: Hierarchical device/object organization
+
 ### ACPI Architecture
 
 ACPI provides platform configuration data and power management to the operating system:

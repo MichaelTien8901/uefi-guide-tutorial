@@ -15,6 +15,50 @@ Persistent storage using UEFI variable services.
 
 ## Overview
 
+### When to Use UEFI Variables
+
+{: .important }
+> **Use UEFI Variables when you need to:**
+> - Store persistent configuration that survives reboots
+> - Read or modify boot options (BootOrder, BootXXXX)
+> - Access Secure Boot settings (PK, KEK, db, dbx)
+> - Share data between UEFI and operating system
+
+| Scenario | Variable | Attributes |
+|:---------|:---------|:-----------|
+| **Read boot timeout** | Timeout | NV+BS+RT |
+| **Modify boot order** | BootOrder | NV+BS+RT |
+| **Add boot entry** | Boot0001 (etc.) | NV+BS+RT |
+| **Check Secure Boot status** | SecureBoot | BS+RT (read-only) |
+| **Store driver config** | VendorVariable | NV+BS or NV+BS+RT |
+| **Temporary data** | VolatileVar | BS only (RAM) |
+| **OS-to-firmware data** | OsIndications | NV+BS+RT |
+
+**Variable Attribute Combinations:**
+
+| Attributes | When to Use |
+|:-----------|:------------|
+| **NV + BS** | Firmware-only persistent config |
+| **NV + BS + RT** | Config accessible from OS (most common) |
+| **BS only** | Temporary boot-time data |
+| **BS + RT** | Temporary data, OS-accessible |
+| **NV + BS + RT + AUTH** | Secure Boot variables |
+
+**Typical Variable Users:**
+- **Boot managers**: Manage boot entries, read BootOrder
+- **Setup utilities**: Store user configuration choices
+- **OS installers**: Add new boot entries
+- **Secure Boot tools**: Enroll keys (requires authentication)
+- **Runtime drivers**: Access config from OS (GetVariable from kernel)
+- **Diagnostics**: Read system info (platform variables)
+
+**Important Considerations:**
+- Limited NVRAM space - don't store large data
+- Authenticated variables require signing (Secure Boot)
+- QueryVariableInfo to check available space
+- Runtime access only for RT-accessible variables
+- Some variables are read-only (SecureBoot, SetupMode)
+
 ### Variable Architecture
 
 UEFI variables provide persistent key-value storage:
