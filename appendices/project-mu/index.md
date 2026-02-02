@@ -19,14 +19,14 @@ Microsoft's modular UEFI firmware framework for scalable, maintainable, and secu
 
 | Section | Topic | Focus |
 |---------|-------|-------|
-| [B.1](b-1-repository-structure/) | Repository Structure | Multi-repo architecture, package layouts |
-| [B.2](b-2-installation-setup/) | Installation & Setup | Prerequisites, Stuart installation, first platform |
-| [B.3](b-3-stuart-build/) | Stuart Build System | Commands, PlatformBuild.py, build workflow |
-| [B.4](b-4-unique-features/) | Unique Features | DFCI, Rust support, Front Page, Unit Testing |
-| [B.5](b-5-cicd/) | CI/CD Integration | Azure Pipelines, GitHub Actions templates |
-| [B.6](b-6-qemu/) | Running on QEMU | Q35 and ARM SBSA platforms |
-| [B.7](b-7-migration/) | Migration from EDK2 | Step-by-step migration guide |
-| [B.8](b-8-troubleshooting/) | Troubleshooting & References | Common issues, examples, resources |
+| [B.1](repository-structure/) | Repository Structure | Multi-repo architecture, package layouts |
+| [B.2](installation-setup/) | Installation & Setup | Prerequisites, Stuart installation, first platform |
+| [B.3](stuart-build/) | Stuart Build System | Commands, PlatformBuild.py, build workflow |
+| [B.4](unique-features/) | Unique Features | DFCI, Rust support, Front Page, Unit Testing |
+| [B.5](cicd/) | CI/CD Integration | Azure Pipelines, GitHub Actions templates |
+| [B.6](qemu/) | Running on QEMU | Q35 and ARM SBSA platforms |
+| [B.7](migration/) | Migration from EDK2 | Step-by-step migration guide |
+| [B.8](troubleshooting/) | Troubleshooting & References | Common issues, examples, resources |
 
 ---
 
