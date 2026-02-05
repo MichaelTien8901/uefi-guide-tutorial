@@ -14,8 +14,8 @@ color_scheme: dark
 mermaid:
   version: "10.6.0"
 
-# Logo and favicon (disabled - no logo file)
-# logo: "/assets/images/uefi-logo.png"
+# Logo and favicon
+logo: "/assets/images/uefi_logo.png"
 # favicon_ico: "/assets/images/favicon.ico"
 
 # Search
