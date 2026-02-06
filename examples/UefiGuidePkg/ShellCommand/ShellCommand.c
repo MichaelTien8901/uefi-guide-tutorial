@@ -231,7 +231,7 @@ ShellCommandMain (
   LIST_ENTRY    *ParamPackage;
   BOOLEAN       Verbose;
   BOOLEAN       ShowHelp;
-  CONST CHAR16  *Problem;
+  CHAR16        *Problem;
 
   //
   // Initialize Shell library
@@ -260,7 +260,7 @@ ShellCommandMain (
   if (EFI_ERROR (Status)) {
     if (Problem != NULL) {
       Print (L"Error: %s\n", Problem);
-      FreePool ((VOID *)Problem);
+      FreePool (Problem);
     }
     return Status;
   }

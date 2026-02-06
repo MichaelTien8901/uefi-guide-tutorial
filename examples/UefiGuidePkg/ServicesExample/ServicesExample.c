@@ -133,7 +133,6 @@ DemoTaskPriorityLevels (
   )
 {
   EFI_TPL  OldTpl;
-  EFI_TPL  CurrentTpl;
 
   Print (L"\n=== Boot Services: Task Priority Levels ===\n\n");
 

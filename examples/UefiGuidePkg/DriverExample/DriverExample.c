@@ -18,6 +18,34 @@
 #include <Protocol/PciIo.h>
 
 //
+// Forward declarations
+//
+EFI_STATUS
+EFIAPI
+DriverBindingSupported (
+  IN EFI_DRIVER_BINDING_PROTOCOL  *This,
+  IN EFI_HANDLE                   ControllerHandle,
+  IN EFI_DEVICE_PATH_PROTOCOL     *RemainingDevicePath OPTIONAL
+  );
+
+EFI_STATUS
+EFIAPI
+DriverBindingStart (
+  IN EFI_DRIVER_BINDING_PROTOCOL  *This,
+  IN EFI_HANDLE                   ControllerHandle,
+  IN EFI_DEVICE_PATH_PROTOCOL     *RemainingDevicePath OPTIONAL
+  );
+
+EFI_STATUS
+EFIAPI
+DriverBindingStop (
+  IN EFI_DRIVER_BINDING_PROTOCOL  *This,
+  IN EFI_HANDLE                   ControllerHandle,
+  IN UINTN                        NumberOfChildren,
+  IN EFI_HANDLE                   *ChildHandleBuffer OPTIONAL
+  );
+
+//
 // Driver Binding Protocol instance
 //
 EFI_DRIVER_BINDING_PROTOCOL gDriverBindingProtocol = {

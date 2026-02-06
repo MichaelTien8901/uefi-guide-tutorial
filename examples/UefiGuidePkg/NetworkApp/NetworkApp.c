@@ -23,6 +23,7 @@
 #include <Protocol/Tcp4.h>
 #include <Protocol/Ip4.h>
 #include <Protocol/Ip4Config2.h>
+#include <Protocol/ServiceBinding.h>
 
 /**
   Check if network is configured.
@@ -205,7 +206,7 @@ DemoDnsLookup (
     Config.DnsServerList[0].Addr[3] = 8;
   }
   Config.EnableDnsCache = TRUE;
-  Config.Protocol = EFI_IP_PROTO_UDP;
+  Config.Protocol = 17;  // UDP protocol number
   Config.UseDefaultSetting = TRUE;
 
   Status = Dns4->Configure (Dns4, &Config);

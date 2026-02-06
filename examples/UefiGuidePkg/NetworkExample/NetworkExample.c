@@ -25,6 +25,7 @@
 #include <Protocol/Tcp4.h>
 #include <Protocol/Udp4.h>
 #include <Protocol/Dhcp4.h>
+#include <Protocol/ServiceBinding.h>
 
 /**
   Print MAC address.
