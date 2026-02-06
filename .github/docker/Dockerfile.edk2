@@ -1,0 +1,49 @@
+# Dockerfile for EDK2 UEFI build environment
+# Used by GitHub Actions to build UEFI examples
+
+FROM ubuntu:22.04
+
+# Prevent interactive prompts during package installation
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install EDK2 build dependencies
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    uuid-dev \
+    iasl \
+    git \
+    nasm \
+    python3 \
+    python3-pip \
+    python-is-python3 \
+    gcc-aarch64-linux-gnu \
+    gcc-riscv64-linux-gnu \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up EDK2 workspace
+WORKDIR /edk2
+
+# Clone EDK2 and required submodules only
+ARG EDK2_TAG=edk2-stable202311
+RUN git clone --depth 1 --branch ${EDK2_TAG} https://github.com/tianocore/edk2.git . && \
+    git submodule update --init --depth 1 \
+        BaseTools/Source/C/BrotliCompress/brotli \
+        MdeModulePkg/Library/BrotliCustomDecompressLib/brotli \
+        MdePkg/Library/MipiSysTLib/mipisyst \
+        MdePkg/Library/BaseFdtLib/libfdt
+
+# Build BaseTools
+RUN make -C BaseTools
+
+# Set environment variables for EDK2 build
+ENV WORKSPACE=/edk2
+ENV EDK_TOOLS_PATH=/edk2/BaseTools
+ENV PATH="${EDK_TOOLS_PATH}/BinWrappers/PosixLike:${PATH}"
+
+# Create entrypoint script
+RUN echo '#!/bin/bash\n\
+source edksetup.sh --reconfig\n\
+exec "$@"' > /entrypoint.sh && chmod +x /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["bash"]
